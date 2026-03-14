@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+}
+
+#num {
+  display: block;
+  text-align: center;
+  font-size: 5em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#btncon {
+  text-align: center;
+}
+
+#but1 {
+  padding: 5px 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.gue #numb {
+  font-size: 1.5em;
+}
+
+.gue h4,
+.gue #numb {
+  margin: 0;
+  padding: 0;
+}
+
+.ind {
+  width: 100px;
+  height: 30px;
+
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.gue {
+  width: 140px;
+  height: 115px;
+  display: flex;
+  padding: 2px;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 0px 35vw 20vh;
+  border: 2px black solid;
+  border-radius: 3px;
+  scale: calc(1.5);
+}
+#gs1 {
+  width: 100px;
+}
+#b0 {
+  height: 0;
+}
+#numgu {
+  width: 100px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 0;
+}

@@ -1,0 +1,47 @@
+#box1{display: block;
+width: 250px;
+height: 250px;
+border: 5px solid black;
+font-size: 13em;
+text-align: center;
+background-color: green;
+
+ransform: translate(50px ,100px) rotateZ(90deg) :
+
+}
+#box1:active{animation-name: slideright;
+animation-duration: 5s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+
+animation-timing-function:steps();
+}
+body{margin: 0%; background-color: black;}
+@keyframes slideleft{
+50%{ color: blue;
+background-color: aquamarine;
+transform: translateX(500px)  rotatez(360deg)  scale(1.5);
+opacity: 1;
+} }
+
+@keyframes slideright{
+from{ color: blue;
+background-color: aquamarine;
+transform: translateX(-500px)  rotatez(360deg)  scale(0.5);
+animation-direction: alternate;
+}
+
+}
+
+@keyframes colgor { 
+    0%{background-color: red;}
+     20%{background-color: yellow;}
+      40%{background-color:lightblue;}
+       60%{background-color: blue;}
+        80%{background-color: purple;}
+        100%{background-color:green}
+       
+}
+@keyframes glow{
+     100%{box-shadow:0px 0px 100px yellow ;}
+}

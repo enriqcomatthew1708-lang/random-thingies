@@ -1,0 +1,30 @@
+header{background-color: grey;
+float: left;
+padding: 10px;}
+.navbar{background-color: black;
+height: 50px;}
+
+body{margin: 0px;}
+
+aside{width: 20%;
+float: left;
+padding: 10px;}
+
+section{width: 40%;
+float: left;
+padding: 10px;}
+article{width: 40%;
+float: left;
+padding: 10px;}
+*{box-sizing: border-box;}
+
+footer{background-color: grey;
+float: left;
+padding: 10px;
+clear: both;
+display: block;}
+@media screen and (max-width:600px){aside, section, article{width: 100%;}}
+
+.gallery img{width: 200px;
+display: inline-block;}
+

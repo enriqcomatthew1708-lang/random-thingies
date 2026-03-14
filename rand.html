@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>idkbri</title>
+    <link rel="stylesheet" href="idko.css" />
+  </head>
+
+  <body>
+    <h1>Temperature converter</h1>
+    <h4>Exclusive to Farenheit and Celcius</h4>
+
+    <div class="cont">
+      <button id="Chan">Switch</button>
+      <div class="icon">
+        <h3 id="t1">Celcius</h3>
+        <h3 id="t2">farenheit</h3>
+      </div>
+      <div class="icont">
+        <input
+          type="number"
+          id="cel"
+          placeholder="0"
+          max="120"
+          min="-120"
+          onkeydown="return false;"
+        />
+        <p id="ar">➡️</p>
+        <p id="far">0</p>
+      </div>
+
+      <button id="con">Convert</button>
+    </div>
+    <script src="dropdown.js"></script>
+  </body>
+</html>

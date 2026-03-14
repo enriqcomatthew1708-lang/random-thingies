@@ -1,0 +1,23 @@
+.gallery {display: inline-block
+;border: 1px solid grey;
+margin: 5px;
+width: 200px;
+text-decoration: none;
+}
+.gallery a{text-decoration:none;}
+.gallery .description{padding: 10; text-align: center;}
+.gallery:hover{border: 10px solid grey;}
+.gallery img{width: 100%; height: auto;}
+.icon {text-align: center; }
+.fa-solid.fa-house.fa-5x{color: green;}
+.fa-brands.fa-twitter.fa-5x{color: red;}
+.fa-brands.fa-youtube.fa-5x{color: blue;}
+
+.fa-solid.fa-house.fa-5x:hover,
+.fa-brands.fa-twitter.fa-5x:hover,
+.fa-brands.fa-youtube.fa-5x:hover{color: grey;}
+
+
+.icon a{text-decoration:none;}
+.icon i{margin-right: 20px;}
+

@@ -1,0 +1,18 @@
+h1{text-align: center;}
+body{margin: 0px;}
+.navbar ul{list-style-type: none;
+background-color: grey;
+padding: 0px;
+margin: 0px;
+overflow: hidden;
+}
+.navbar a{ color: white;
+text-decoration: none;
+padding: 15px;
+display: block;
+text-align: center;}
+.navbar a:hover{background-color: lightgray;}
+.navbar li{float: left;
+}
+main{margin-left: 20px;
+margin-right: 20px;}

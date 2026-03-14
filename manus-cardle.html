@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newton's Cradle - Realistic Physics</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1a1a1a;
+            color: #eee;
+            font-family: sans-serif;
+            overflow: hidden;
+        }
+        canvas {
+            background-color: #222;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            border-radius: 8px;
+        }
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            text-align: center;
+            pointer-events: none;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="controls">
+        Click and drag the balls to start the motion.
+    </div>
+
+    <script>
+        /**
+         * Newton's Cradle Simulation
+         * 
+         * Physics Implementation:
+         * 1. Pendulum Motion: Calculated using angular acceleration (alpha = -g/L * sin(theta)).
+         * 2. Integration: Velocity Verlet or simple Euler (here using time-delta based Euler for simplicity and stability).
+         * 3. Collision: Perfectly elastic collisions between spheres. 
+         *    Since it's a 1D constraint (pendulum), we treat collisions as swapping velocities 
+         *    along the arc when balls overlap.
+         * 4. Momentum Transfer: Handled by iterating through collisions in a single frame.
+         */
+
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Configuration
+        const BALL_COUNT = 5;
+        const BALL_RADIUS = 25;
+        const STRING_LENGTH = 250;
+        const GRAVITY = 980; // pixels/s^2
+        const DAMPING = 0.998; // Energy loss per second
+        const SUBSTEPS = 8; // Physics steps per frame for stability
+
+        let width, height, centerX, centerY;
+        let balls = [];
+        let draggedBall = null;
+
+        class Ball {
+            constructor(index) {
+                this.index = index;
+                this.radius = BALL_RADIUS;
+                this.length = STRING_LENGTH;
+                this.mass = 1;
+                
+                // Position in pendulum coordinates (angle theta)
+                // 0 is straight down, positive is right
+                this.theta = 0;
+                this.omega = 0; // angular velocity (rad/s)
+                
+                // Rest position on the X axis
+                this.restX = (index - (BALL_COUNT - 1) / 2) * (BALL_RADIUS * 2);
+            }
+
+            get x() {
+                return centerX + this.restX + this.length * Math.sin(this.theta);
+            }
+
+            get y() {
+                return centerY + this.length * Math.cos(this.theta);
+            }
+
+            // Linear velocity at the bottom of the arc (tangential)
+            get velocity() {
+                return this.omega * this.length;
+            }
+
+            set velocity(v) {
+                this.omega = v / this.length;
+            }
+
+            update(dt) {
+                if (this === draggedBall) return;
+
+                // Pendulum physics: alpha = -(g/L) * sin(theta)
+                const alpha = -(GRAVITY / this.length) * Math.sin(this.theta);
+                
+                // Update angular velocity and angle
+                this.omega += alpha * dt;
+                this.theta += this.omega * dt;
+
+                // Apply damping
+                this.omega *= Math.pow(DAMPING, dt);
+            }
+
+            draw() {
+                const bx = this.x;
+                const by = this.y;
+                const rx = centerX + this.restX;
+                const ry = centerY;
+
+                // Draw string
+                ctx.beginPath();
+                ctx.moveTo(rx, ry);
+                ctx.lineTo(bx, by);
+                ctx.strokeStyle = '#888';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+
+                // Draw ball shadow
+                ctx.beginPath();
+                ctx.arc(bx + 4, by + 4, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(0,0,0,0.3)';
+                ctx.fill();
+
+                // Draw ball (gradient for metallic look)
+                const gradient = ctx.createRadialGradient(
+                    bx - this.radius * 0.3, 
+                    by - this.radius * 0.3, 
+                    this.radius * 0.1, 
+                    bx, by, this.radius
+                );
+                gradient.addColorStop(0, '#fff');
+                gradient.addColorStop(0.3, '#aaa');
+                gradient.addColorStop(1, '#333');
+
+                ctx.beginPath();
+                ctx.arc(bx, by, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = gradient;
+                ctx.fill();
+                
+                // Shine highlight
+                ctx.beginPath();
+                ctx.arc(bx - this.radius * 0.4, by - this.radius * 0.4, this.radius * 0.1, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(255,255,255,0.4)';
+                ctx.fill();
+            }
+        }
+
+        function init() {
+            resize();
+            balls = [];
+            for (let i = 0; i < BALL_COUNT; i++) {
+                balls.push(new Ball(i));
+            }
+            
+            // Initial lift of the first ball to start the animation
+            balls[0].theta = -Math.PI / 4;
+            
+            requestAnimationFrame(loop);
+        }
+
+        function resize() {
+            width = window.innerWidth * 0.8;
+            height = window.innerHeight * 0.8;
+            canvas.width = width;
+            canvas.height = height;
+            centerX = width / 2;
+            centerY = height / 4;
+        }
+
+        function resolveCollisions() {
+            // To handle multiple balls colliding simultaneously (the "chain reaction"),
+            // we iterate multiple times per substep. For 5 balls, 4 passes ensure
+            // an impulse can travel from one end to the other.
+            for (let iter = 0; iter < BALL_COUNT - 1; iter++) {
+                // Forward pass (left to right)
+                for (let i = 0; i < balls.length - 1; i++) {
+                    collide(balls[i], balls[i + 1]);
+                }
+                // Backward pass (right to left)
+                for (let i = balls.length - 1; i > 0; i--) {
+                    collide(balls[i - 1], balls[i]);
+                }
+            }
+        }
+
+        function collide(b1, b2) {
+            const dx = b2.x - b1.x;
+            const dy = b2.y - b1.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            const minDist = b1.radius + b2.radius;
+
+            if (dist < minDist) {
+                // Position correction to prevent sticking
+                const overlap = minDist - dist;
+                const angleAdjust = (overlap / b1.length) * 0.5;
+                b1.theta -= angleAdjust;
+                b2.theta += angleAdjust;
+
+                // Elastic collision (velocity swap for equal masses)
+                const v1 = b1.velocity;
+                const v2 = b2.velocity;
+                
+                // Only swap if they are moving towards each other
+                if (v1 > v2) {
+                    b1.velocity = v2;
+                    b2.velocity = v1;
+                }
+            }
+        }
+
+        let lastTime = 0;
+        function loop(timestamp) {
+            if (!lastTime) lastTime = timestamp;
+            let dt = (timestamp - lastTime) / 1000;
+            lastTime = timestamp;
+
+            // Cap dt to prevent massive jumps if the tab is backgrounded
+            if (dt > 0.1) dt = 0.1;
+
+            // Physics sub-stepping for better collision resolution
+            const subDt = dt / SUBSTEPS;
+            for (let s = 0; s < SUBSTEPS; s++) {
+                balls.forEach(ball => ball.update(subDt));
+                resolveCollisions();
+            }
+
+            // Draw
+            ctx.clearRect(0, 0, width, height);
+            
+            // Draw Frame
+            ctx.strokeStyle = '#444';
+            ctx.lineWidth = 8;
+            ctx.lineCap = 'round';
+            ctx.beginPath();
+            ctx.moveTo(centerX - 150, centerY);
+            ctx.lineTo(centerX + 150, centerY);
+            ctx.stroke();
+
+            balls.forEach(ball => ball.draw());
+
+            requestAnimationFrame(loop);
+        }
+
+        // Interaction
+        canvas.addEventListener('mousedown', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+
+            balls.forEach(ball => {
+                const dx = mouseX - ball.x;
+                const dy = mouseY - ball.y;
+                if (Math.sqrt(dx * dx + dy * dy) < ball.radius) {
+                    draggedBall = ball;
+                }
+            });
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (draggedBall) {
+                const rect = canvas.getBoundingClientRect();
+                const mouseX = e.clientX - rect.left;
+                const mouseY = e.clientY - rect.top;
+                
+                // Calculate angle from mouse position relative to pivot
+                const rx = centerX + draggedBall.restX;
+                const ry = centerY;
+                
+                const dx = mouseX - rx;
+                const dy = mouseY - ry;
+                
+                draggedBall.theta = Math.atan2(dx, dy);
+                draggedBall.omega = 0; // Reset velocity while dragging
+            }
+        });
+
+        window.addEventListener('mouseup', () => {
+            draggedBall = null;
+        });
+
+        window.addEventListener('resize', resize);
+
+        init();
+    </script>
+</body>
+</html>

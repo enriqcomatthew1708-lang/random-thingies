@@ -1,0 +1,35 @@
+.bores{width: 200px;
+height: 200px;
+visibility: visible;
+
+text-align: center;
+float: left;
+
+
+}
+#box1{background-color: blue;
+position: sticky;
+left: 300px;
+top: 100px;
+
+}
+#box2{background: red;
+position: fixed;
+top: 100px;
+left: 100px;
+}
+
+#box3{ background: green;
+width: 100px;
+height: 100px;
+position: absolute;
+top: 50px;
+left: 150px;
+}
+body{background-image: url(images/Hawai\ part\ 2.png);
+background-repeat:no-repeat ;
+background-position: center;
+background-attachment: fixed;
+background-size: cover;
+
+}

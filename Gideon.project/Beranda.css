@@ -1,0 +1,935 @@
+/* ============================================================
+   BERANDA.CSS — SMP Kristen Gideon
+     1.  Reset & Base
+     2.  Hero / Top Image
+     3.  Tab Bar (quick links below hero)
+     4.  Stats / Add Info
+     5.  "Kenapa Pilih Kami?" Cards
+     6.  Tentang Kami (Visi & Misi)
+     7.  Pelajaran Tambahan
+     8.  Keistimewaan
+     9.  CTA / Bottom Card (Pendaftaran)
+     10. Contact Info
+     11. Footer
+ */
+
+/* ============================================================
+   1. RESET & BASE
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================
+   2. HERO / TOP IMAGE
+   Parent:  .topimg
+   Children: .smalltext . .greet, .importanttext, .Info, .Mainakademik
+ */
+
+.topimg {
+  background-image: url("Img/Skolimg.png");
+  background-size: 110%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 600px;
+  padding: 2rem;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Dark gradient */
+.topimg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(10, 20, 60, 0.1), rgb(9, 18, 45));
+  z-index: 0;
+}
+
+.topimg > * {
+  position: relative;
+  z-index: 1; /* IMPORTANT*/
+}
+
+.smalltext {
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.smalltext h3 {
+  margin: 0;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.greet {
+  background: #f7ac34;
+  color: #000;
+  padding: 5px 15px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  width: fit-content;
+  white-space: nowrap;
+}
+.importanttext h2,
+.importanttext h3,
+.importanttext h5 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.importanttext h2 {
+  color: white;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.importanttext h3 {
+  color: #f5a623;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.subtext {
+  color: white;
+  font-weight: 600;
+  padding: 5px;
+}
+
+.Info {
+  margin-top: 15px;
+  margin-bottom: 0.75rem;
+}
+
+.Info a,
+.Mainakademik a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 96%;
+  margin: auto;
+  padding: 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.Info a h2,
+.Mainakademik a h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.Info a {
+  background: #f5a623;
+  color: #000;
+}
+
+.Mainakademik a {
+  background: transparent;
+  border: 1.5px solid white;
+  color: white;
+}
+
+/* ============================================================
+   3. TAB BAR  (quick-links below hero)
+   Parent:  .tab-bar
+   Children: .tab1 .tab2 .tab3 .tab4
+*/
+
+.tab-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  border-radius: 16px;
+  margin: -22px 16px 0 16px;
+  position: relative;
+  z-index: 10;
+}
+
+.tab-bar a {
+  color: black;
+  text-decoration: none;
+}
+
+/* tab styles */
+.tab1,
+.tab2,
+.tab3,
+.tab4 {
+  width: 23%;
+  height: 11vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.tab1 h5,
+.tab2 h5,
+.tab3 h5,
+.tab4 h5 {
+  font-size: 1.35rem; /* emoji icon size */
+}
+
+.tab1 h6,
+.tab2 h6,
+.tab3 h6,
+.tab4 h6 {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* tab colours */
+.tab1 {
+  background-color: rgba(239, 246, 255, 1);
+  border: 1px solid rgba(219, 234, 254, 1);
+}
+.tab2 {
+  background-color: rgba(255, 251, 235, 1);
+  border: 1px solid rgba(254, 243, 199, 1);
+}
+.tab3 {
+  background-color: rgba(240, 253, 244, 1);
+  border: 1px solid rgba(220, 252, 231, 1);
+}
+.tab4 {
+  background-color: rgba(254, 242, 242, 1);
+  border: 1px solid rgba(254, 226, 226, 1);
+}
+
+/* ============================================================
+   4. STATS / ADD INFO
+   Parent:  .addinfo
+   Children: .addinfo1 .addinfo2 . .siswaaktif .pengajar .prestasi .Tahun
+*/
+
+.addinfo {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  background-color: white;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.addinfo h4,
+.addinfo h5 {
+  margin: 0;
+  padding: 0;
+  color: #7484a0;
+}
+
+.addinfo i {
+  color: hsl(225, 84%, 42%);
+  background-color: rgb(213, 231, 255);
+  padding: 11px;
+  border-radius: 15px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.addinfo1,
+.addinfo2 {
+  display: flex;
+  flex-direction: row;
+  gap: 17px;
+}
+
+.siswaaktif,
+.pengajar,
+.prestasi,
+.Tahun {
+  width: 38vw;
+  height: 115px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  gap: 5px;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.05),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================================
+   5. "KENAPA PILIH KAMI?" CARDS
+   Parent:  .knpcont
+   Children: .microtxt, h3, .knpcard  .bookicon/.trophicon/.teachicon + .txtcont
+*/
+
+.knpcont {
+  margin-top: 1.5em;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-bottom: 2.5rem;
+}
+
+.microtxt {
+  width: fit-content;
+  padding: 5px 8px;
+  background-color: rgba(165, 230, 252, 0.501);
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+.microtxt h6 {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #5784ff;
+}
+
+.knpcont h3 {
+  margin-top: 3px;
+  margin-left: 14px;
+  color: #1c398e;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.knpcard {
+  width: 90%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 10px 20px 10px 0;
+  margin: auto;
+  border-radius: 20px;
+  flex-shrink: 0;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.05),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.knpcard i {
+  padding: 12px;
+  margin: 8px 0 1em 12px;
+  font-size: larger;
+  border-radius: 12px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.knpcard h4 {
+  color: #1c398e;
+  margin-bottom: 5px;
+}
+
+/* Icon colour  */
+.fa-solid.fa-book {
+  background-color: rgb(215, 231, 252);
+  color: #1c398e;
+}
+.fa-solid.fa-trophy {
+  background-color: #fef3c6;
+  color: #cc7631;
+}
+.fa-solid.fa-chalkboard-user {
+  background-color: #dbfce7;
+  color: #008235;
+}
+
+/* ============================================================
+   6. TENTANG KAMI  (Visi & Misi)
+   Parent:  .ttgkami
+   Children: .ttgimg, .ttgtext, .vismistxt, .visicont, .misicont, .ttgbuton
+ */
+
+.ttgkami {
+  width: 100%;
+  min-height: 45em;
+  height: fit-content;
+  padding: 1em;
+  background-color: #1c398e;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2em;
+  box-sizing: border-box;
+  padding-bottom: 2em;
+}
+
+.ttgkami h2,
+.ttgkami h4,
+.ttgkami h5,
+.ttgkami a {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-decoration: none;
+}
+
+.misicont span i {
+  font-size: x-small;
+  color: #e2ad26;
+  margin-top: 4px;
+}
+
+.ttgimg {
+  min-width: 90%;
+  height: 210px;
+  background-color: white;
+  border-radius: 12px;
+  align-self: center;
+}
+
+.ttgtext {
+  font-size: 0.85rem;
+  width: fit-content;
+  padding: 5.5px 14px;
+  background-color: #ffb900;
+  border-radius: 12px;
+}
+
+.ttgtext h5 {
+  font-weight: 500;
+  color: black;
+}
+
+.vismistxt {
+  margin: 0;
+  padding: 0;
+}
+
+.visicont {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: rgba(245, 245, 245, 0.223);
+}
+
+.visicont h4 {
+  color: #f2a63c;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.misicont {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: rgba(245, 245, 245, 0.223);
+
+  font-size: 1rem;
+
+  align-content: center;
+  text-align: start;
+}
+.misicont h5,
+.visicont h5 {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.misicont h4 {
+  color: #f2a63c;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.misicont span {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 10px;
+  padding-left: 4px;
+  align-content: center;
+}
+
+.ttgbuton {
+  width: 80%;
+  height: 7vh;
+  background-color: #ecb313;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  align-self: center;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
+.ttgbuton h4 {
+  color: black;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.ttgbuton i {
+  color: black;
+  font-size: 1em;
+  margin-top: 2px;
+}
+
+/* ============================================================
+   7. PELAJARAN TAMBAHAN
+   Parent:  .simpletxt
+   Children: .needtxt  .innertxt + .linkarrow, .addedtab, .bat1/.bat2/.bat3
+ */
+
+.simpletxt {
+  width: 100%;
+  height: fit-content;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.needtxt {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.innertxt {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: 0.5em;
+  text-align: start;
+}
+
+.innertxt h4 {
+  color: #1f3b8f;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.akatxt {
+  width: fit-content;
+  padding: 5px 15px;
+  background-color: #fef3c6;
+  border-radius: 1em;
+}
+
+.akatxt h6 {
+  color: #e58a2f;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
+.linkarrow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  color: #4971eb;
+}
+
+.linkarrow a {
+  color: #204dd4;
+  text-decoration: none;
+}
+
+.linkarrow h5 {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.fa-solid.fa-chevron-right.fa-1x {
+  color: #4971eb;
+  margin-top: 3px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.addedtab {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  padding: 6px;
+  align-content: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 1em;
+}
+
+.bat1,
+.bat2,
+.bat3 {
+  min-width: 100px;
+  min-height: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 12px;
+  border-radius: 15px;
+  flex-shrink: 0;
+  color: #0e3198;
+  background-color: white;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.05),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.bat1 h5,
+.bat2 h5,
+.bat3 h5 {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* ============================================================
+   8. KEISTIMEWAAN 
+   Parent:  .keistimewaan
+   Children: h5, .txtche > i + h6
+ */
+
+.keistimewaan {
+  width: 90%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em 10px 1.5em 10px;
+  background-color: white;
+  border-radius: 18px;
+  margin: auto;
+  margin-bottom: 3em;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.05),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+  margin-top: 8px;
+}
+
+.keistimewaan h5 {
+  color: #0e3198;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-left: 0.7em;
+  margin-bottom: 2px;
+  margin-top: 3px;
+}
+
+.txtche {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  padding-right: 12px;
+  padding-left: 5px;
+  flex-shrink: 0;
+}
+
+.txtche h6 {
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+.txtche i {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.fa-regular.fa-square-check {
+  color: #1bb95a;
+}
+
+/* ============================================================
+   9. CTA / BOTTOM CARD  (Pendaftaran)
+   Parent:  .bottomcardcont
+   Children: .daftartxt, h3, h5, .daftarbottom, .ttgbottom
+ */
+
+.bottomcardcont {
+  width: 85%;
+  height: fit-content;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  background-color: #1c398e;
+  border-radius: 30px;
+  margin: 2em auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.bottomcardcont::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(234, 255, 0, 0.128);
+}
+
+.bottomcardcont::after {
+  content: "";
+  position: absolute;
+  bottom: -70px;
+  left: -50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(233, 35, 35, 0.128);
+}
+
+.daftartxt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 5px;
+  color: #0da57c;
+}
+
+.daftartxt h6 {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.smalldot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #0da57c;
+}
+
+.bottomcardcont h3 {
+  font-size: 1.4rem;
+  color: #f3f5f9;
+  font-weight: 600;
+}
+
+.bottomcardcont h5 {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 200;
+  margin-right: 2em;
+  margin-top: 8px;
+}
+
+.daftarbottom {
+  margin-top: 2em;
+  height: 7vh;
+  width: 75vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  align-self: center;
+  padding: 1rem;
+  background-color: #ffb900;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.daftarbottom a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.fa-solid.fa-arrow-left {
+  transform: rotate(180deg);
+}
+
+.ttgbottom {
+  margin-top: 1em;
+  height: 7vh;
+  width: 75vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  padding: 1rem;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.ttgbottom a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* ============================================================
+   10. CONTACT INFO
+   Parent:  .contactinfo
+   Children: .btmtxt, .contactcard .innercard
+*/
+
+.contactinfo {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 100%;
+  padding: 1.4em;
+  padding-right: 0.5em;
+  margin-top: 1.5em;
+  flex-shrink: 0;
+}
+
+.btmtxt {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btmtxt h3 {
+  font-size: 1.2rem;
+  color: #1c398e;
+  font-weight: 600;
+}
+
+.btmtxt h6 {
+  color: #a1a9b6;
+}
+
+/* Contact card */
+.contactcard {
+  margin-top: 16px;
+  width: 95%;
+  min-height: 9vh;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.05),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+
+  align-items: start;
+  gap: 8px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.contactcard i {
+  align-self: center;
+  font-size: 1.3rem;
+}
+
+.innercard {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-self: center;
+  padding: 5px;
+  text-align: start;
+}
+
+.innercard h5,
+.innercard a {
+  color: black;
+  font-weight: 700;
+  text-decoration: none; /* original value — do not change */
+}
+
+.innercard h6 {
+  font-weight: 500;
+}
+
+/* Icon colour variants */
+.fa-brands.fa-whatsapp {
+  width: fit-content;
+  height: fit-content;
+  color: #2d5be9;
+  background-color: #dbeafe;
+  padding: 12px;
+  flex-shrink: 0;
+  border-radius: 12px;
+}
+
+.fa-brands.fa-whatsapp.fa-1x {
+  width: fit-content;
+  height: fit-content;
+  color: #1b914b;
+  background-color: #dbfce7;
+  padding: 12px;
+  flex-shrink: 0;
+  border-radius: 12px;
+}
+
+.fa-solid.fa-location-dot.fa-1x {
+  width: fit-content;
+  height: fit-content;
+  color: #cc7631;
+  background-color: #fef3c6;
+  padding: 12px 15px;
+  flex-shrink: 0;
+  border-radius: 12px;
+}
+
+/* ============================================================
+   11. FOOTER
+
+============================================================ */
+
+footer {
+  margin-top: 2em;
+}
