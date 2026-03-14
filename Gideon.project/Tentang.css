@@ -1,0 +1,45 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.microtext {
+  width: 60px;
+  height: 13px;
+  text-align: center;
+  background-color: #bfd7f886;
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  border-radius: 125px;
+  flex-shrink: 0;
+  padding: 5px;
+}
+.microtext h6 {
+  font-weight: 600;
+  color: #388ef6;
+  margin: 0;
+  padding: 0;
+  font-size: 0.75rem;
+}
+
+.iftxt {
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  margin-right: 25%;
+}
+
+.iftxt h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: black;
+}
