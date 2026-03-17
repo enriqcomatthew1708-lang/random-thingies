@@ -10,14 +10,26 @@ a {
   padding: 0;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+}
+
 .microtext {
   width: 75px;
   height: 15px;
   text-align: center;
   background-color: #bfd7f886;
   display: flex;
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 1.5em;
+  margin-left: 0.9em;
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -30,19 +42,21 @@ a {
   color: #3c5ec5;
   margin: 0;
   padding: 0;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.25px;
 }
 
 .iftxt {
   width: fit-content;
   height: fit-content;
-
-  margin-left: 0.7em;
+  margin-top: 4px;
+  margin-left: 1em;
+  margin-bottom: 20px;
 }
 
 .iftxt h3 {
-  font-size: 1.35rem;
-  font-weight: 500;
+  font-size: 1.4rem;
+  font-weight: 600;
   color: #07257f;
 }
 
@@ -52,11 +66,12 @@ a {
   background-image:
     linear-gradient(
       to top,
-      rgba(4, 15, 60, 0.85) 0%,
-      rgba(7, 37, 127, 0.35) 50%,
+      rgba(4, 15, 60, 0.9) 0%,
+      rgba(7, 37, 127, 0.4) 50%,
       rgba(7, 37, 127, 0) 100%
     ),
-    url(img/SchoolImg.png);
+    url(placeholder);
+  background-color: white;
   background-size: 100%;
   margin: auto;
   border-radius: 20px;
@@ -76,4 +91,112 @@ a {
 .ttgimg h6 {
   color: #cbcdd8;
   font-size: 0.7rem;
+}
+
+.ttgtxt {
+  width: 80vw;
+  height: fit-content;
+  padding: 10px;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.05),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: start;
+  align-items: start;
+  padding: 1em;
+  gap: 10px;
+  margin-top: 1.2em;
+  border-radius: 15px;
+  flex-shrink: 0;
+  align-self: center;
+  justify-self: center;
+}
+.ttgtxt h4 {
+  color: #1d318d;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.ttgtxt h5 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  word-spacing: 0.25px;
+}
+
+.visicont {
+  width: 80vw;
+  height: fit-content;
+  padding: 1em;
+  background-color: #d9eafd70;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.05),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  text-align: start;
+  align-content: center;
+  margin-top: 1.5em;
+  border-radius: 15px;
+}
+.visicont h4,
+.misicont h4 {
+  color: #0e40b3;
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.visicont h5,
+.misicont h5 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  word-spacing: 0.25px;
+}
+.misicont {
+  width: 80vw;
+  height: fit-content;
+  padding: 1em;
+  background-color: #fef2c1a0;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.05),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  text-align: start;
+  align-content: center;
+  margin-top: 1em;
+  border-radius: 15px;
+}
+.misicont span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+  margin-top: 10px;
+}
+.misicont i {
+  color: #e28d0c;
+  font-size: 0.75em;
+}
+
+.misicont h4 {
+  color: #e28d0c;
+}
+
+.struktur {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  align-content: center;
+  padding-left: 10px;
+}
+.struktur h5 {
+  color: #3f398e;
+  font-size: 1em;
+  margin-left: 5px;
 }
