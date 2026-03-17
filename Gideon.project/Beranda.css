@@ -599,12 +599,13 @@ main {
   justify-content: center;
   margin-top: 10px;
   margin-bottom: 1em;
+  align-self: center;
 }
 
 .bat1,
 .bat2,
 .bat3 {
-  min-width: 100px;
+  min-width: 28vw;
   min-height: 75px;
   display: flex;
   flex-direction: column;
@@ -887,7 +888,7 @@ main {
 .innercard a {
   color: black;
   font-weight: 700;
-  text-decoration: none; /* original value — do not change */
+  text-decoration: none;
 }
 
 .innercard h6 {

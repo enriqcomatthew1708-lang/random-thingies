@@ -4,18 +4,20 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+a {
   margin: 0;
   padding: 0;
 }
 
 .microtext {
-  width: 60px;
-  height: 13px;
+  width: 75px;
+  height: 15px;
   text-align: center;
   background-color: #bfd7f886;
   display: flex;
-  margin: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -25,21 +27,53 @@ p {
 }
 .microtext h6 {
   font-weight: 600;
-  color: #388ef6;
+  color: #3c5ec5;
   margin: 0;
   padding: 0;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 
 .iftxt {
   width: fit-content;
   height: fit-content;
-  padding: 5px;
-  margin-right: 25%;
+
+  margin-left: 0.7em;
 }
 
 .iftxt h3 {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #07257f;
+}
+
+.ttgimg {
+  width: 85vw;
+  height: 24vh;
+  background-image:
+    linear-gradient(
+      to top,
+      rgba(4, 15, 60, 0.85) 0%,
+      rgba(7, 37, 127, 0.35) 50%,
+      rgba(7, 37, 127, 0) 100%
+    ),
+    url(img/SchoolImg.png);
+  background-size: 100%;
+  margin: auto;
+  border-radius: 20px;
+  display: flex;
+
+  flex-direction: column;
+  align-items: start;
+  align-content: end;
+  justify-content: flex-end;
+  color: white;
+  padding: 1em;
+}
+.ttgimg h4 {
   font-size: 1.2rem;
   font-weight: 600;
-  color: black;
+}
+.ttgimg h6 {
+  color: #cbcdd8;
+  font-size: 0.7rem;
 }
