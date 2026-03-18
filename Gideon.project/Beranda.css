@@ -37,6 +37,8 @@ body {
   padding: 0;
   width: 100%;
   overflow-x: hidden;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 main {
@@ -90,7 +92,7 @@ main {
 }
 
 .greet {
-  background: #f7ac34;
+  background: #f59e0b;
   color: #000;
   padding: 5px 15px;
   border-radius: 99px;
@@ -98,6 +100,7 @@ main {
   font-weight: 700;
   width: fit-content;
   white-space: nowrap;
+  letter-spacing: 0.04em;
 }
 .importanttext h2,
 .importanttext h3,
@@ -113,16 +116,17 @@ main {
 }
 
 .importanttext h3 {
-  color: #f5a623;
+  color: #f59e0b;
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 8px;
 }
 
 .subtext {
-  color: white;
-  font-weight: 600;
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 400;
   padding: 5px;
+  line-height: 1.6;
 }
 
 .Info {
@@ -143,6 +147,12 @@ main {
   border-radius: 20px;
   font-weight: 600;
   text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.Info a:active,
+.Mainakademik a:active {
+  opacity: 0.85;
 }
 
 .Info a h2,
@@ -152,13 +162,13 @@ main {
 }
 
 .Info a {
-  background: #f5a623;
+  background: #f59e0b;
   color: #000;
 }
 
 .Mainakademik a {
   background: transparent;
-  border: 1.5px solid white;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
   color: white;
 }
 
@@ -198,6 +208,7 @@ main {
   border-radius: 15px;
   flex-shrink: 0;
   text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
 }
 
 .tab1 h5,
@@ -211,26 +222,26 @@ main {
 .tab2 h6,
 .tab3 h6,
 .tab4 h6 {
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: 0.72rem;
+  font-weight: 600;
 }
 
 /* tab colours */
 .tab1 {
-  background-color: rgba(239, 246, 255, 1);
-  border: 1px solid rgba(219, 234, 254, 1);
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
 }
 .tab2 {
-  background-color: rgba(255, 251, 235, 1);
-  border: 1px solid rgba(254, 243, 199, 1);
+  background-color: #fffbeb;
+  border: 1px solid #fde68a;
 }
 .tab3 {
-  background-color: rgba(240, 253, 244, 1);
-  border: 1px solid rgba(220, 252, 231, 1);
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
 }
 .tab4 {
-  background-color: rgba(254, 242, 242, 1);
-  border: 1px solid rgba(254, 226, 226, 1);
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
 }
 
 /* ============================================================
@@ -252,16 +263,24 @@ main {
   margin-bottom: 2em;
 }
 
-.addinfo h4,
+.addinfo h4 {
+  margin: 0;
+  padding: 0;
+  color: #1c398e;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
 .addinfo h5 {
   margin: 0;
   padding: 0;
-  color: #7484a0;
+  color: #94a3b8;
+  font-size: 0.75rem;
 }
 
 .addinfo i {
-  color: hsl(225, 84%, 42%);
-  background-color: rgb(213, 231, 255);
+  color: #1d4ed8;
+  background-color: #dbeafe;
   padding: 11px;
   border-radius: 15px;
   width: fit-content;
@@ -285,11 +304,11 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 16px;
   gap: 5px;
   box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.05),
-    0 8px 24px rgba(0, 0, 0, 0.08);
+    0 1px 4px rgba(0, 0, 0, 0.04),
+    0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 /* ============================================================
@@ -310,16 +329,17 @@ main {
 
 .microtxt {
   width: fit-content;
-  padding: 5px 8px;
-  background-color: rgba(165, 230, 252, 0.501);
+  padding: 5px 10px;
+  background-color: rgba(147, 197, 253, 0.35);
   border-radius: 15px;
   margin-left: 15px;
 }
 
 .microtxt h6 {
   font-size: 0.6rem;
-  font-weight: 600;
-  color: #5784ff;
+  font-weight: 700;
+  color: #3b5bdb;
+  letter-spacing: 0.07em;
 }
 
 .knpcont h3 {
@@ -327,7 +347,7 @@ main {
   margin-left: 14px;
   color: #1c398e;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .knpcard {
@@ -342,8 +362,8 @@ main {
   border-radius: 20px;
   flex-shrink: 0;
   box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.05),
-    0 8px 24px rgba(0, 0, 0, 0.08);
+    0 1px 4px rgba(0, 0, 0, 0.04),
+    0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 .knpcard i {
@@ -358,20 +378,29 @@ main {
 .knpcard h4 {
   color: #1c398e;
   margin-bottom: 5px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.knpcard h5 {
+  color: #64748b;
+  font-weight: 600;
+  font-size: 0.82rem;
+  line-height: 1.6;
 }
 
 /* Icon colour  */
 .fa-solid.fa-book {
-  background-color: rgb(215, 231, 252);
+  background-color: #dbeafe;
   color: #1c398e;
 }
 .fa-solid.fa-trophy {
-  background-color: #fef3c6;
-  color: #cc7631;
+  background-color: #fef3c7;
+  color: #b45309;
 }
 .fa-solid.fa-chalkboard-user {
-  background-color: #dbfce7;
-  color: #008235;
+  background-color: #dcfce7;
+  color: #16a34a;
 }
 
 /* ============================================================
@@ -406,14 +435,14 @@ main {
 
 .misicont span i {
   font-size: x-small;
-  color: #e2ad26;
+  color: #d97706;
   margin-top: 4px;
 }
 
 .ttgimg {
   min-width: 90%;
   height: 210px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   align-self: center;
 }
@@ -422,18 +451,21 @@ main {
   font-size: 0.85rem;
   width: fit-content;
   padding: 5.5px 14px;
-  background-color: #ffb900;
+  background-color: #f59e0b;
   border-radius: 12px;
 }
 
 .ttgtext h5 {
-  font-weight: 500;
+  font-weight: 600;
   color: black;
+  letter-spacing: 0.05em;
 }
 
 .vismistxt {
   margin: 0;
   padding: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
 .visicont {
@@ -444,13 +476,13 @@ main {
   gap: 6px;
   padding: 15px;
   border-radius: 15px;
-  background-color: rgba(245, 245, 245, 0.223);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .visicont h4 {
-  color: #f2a63c;
-  font-size: 1.3rem;
-  font-weight: 500;
+  color: #f08c00;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
 .misicont {
@@ -461,23 +493,24 @@ main {
   gap: 0.8em;
   padding: 15px;
   border-radius: 15px;
-  background-color: rgba(245, 245, 245, 0.223);
-
+  background-color: rgba(255, 255, 255, 0.1);
   font-size: 1rem;
-
   align-content: center;
   text-align: start;
 }
+
 .misicont h5,
 .visicont h5 {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .misicont h4 {
-  color: #f2a63c;
-  font-size: 1.3rem;
-  font-weight: 500;
+  color: #f08c00;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
 .misicont span {
@@ -492,7 +525,7 @@ main {
 .ttgbuton {
   width: 80%;
   height: 7vh;
-  background-color: #ecb313;
+  background-color: #f59e0b;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -501,11 +534,16 @@ main {
   align-self: center;
   border-radius: 15px;
   text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.ttgbuton:active {
+  opacity: 0.85;
 }
 
 .ttgbuton h4 {
   color: black;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1rem;
 }
 
@@ -545,22 +583,23 @@ main {
 }
 
 .innertxt h4 {
-  color: #1f3b8f;
+  color: #1c398e;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .akatxt {
   width: fit-content;
   padding: 5px 15px;
-  background-color: #fef3c6;
+  background-color: #fef3c7;
   border-radius: 1em;
 }
 
 .akatxt h6 {
-  color: #e58a2f;
+  color: #b45309;
   font-size: 0.6rem;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.07em;
 }
 
 .linkarrow {
@@ -568,11 +607,11 @@ main {
   flex-direction: row;
   align-items: center;
   gap: 5px;
-  color: #4971eb;
+  color: #3b5bdb;
 }
 
 .linkarrow a {
-  color: #204dd4;
+  color: #3b5bdb;
   text-decoration: none;
 }
 
@@ -582,7 +621,7 @@ main {
 }
 
 .fa-solid.fa-chevron-right.fa-1x {
-  color: #4971eb;
+  color: #3b5bdb;
   margin-top: 3px;
   font-size: 0.75rem;
   font-weight: 600;
@@ -615,22 +654,22 @@ main {
   padding: 12px;
   border-radius: 15px;
   flex-shrink: 0;
-  color: #0e3198;
+  color: #1c398e;
   background-color: white;
   box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.05),
-    0 8px 24px rgba(0, 0, 0, 0.08);
+    0 1px 4px rgba(0, 0, 0, 0.04),
+    0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 .bat1 h5,
 .bat2 h5,
 .bat3 h5 {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 600;
 }
 
 /* ============================================================
-   8. KEISTIMEWAAN 
+   8. KEISTIMEWAAN
    Parent:  .keistimewaan
    Children: h5, .txtche > i + h6
  */
@@ -647,15 +686,15 @@ main {
   margin: auto;
   margin-bottom: 3em;
   box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.05),
-    0 8px 24px rgba(0, 0, 0, 0.08);
+    0 1px 4px rgba(0, 0, 0, 0.04),
+    0 6px 18px rgba(0, 0, 0, 0.06);
   margin-top: 8px;
 }
 
 .keistimewaan h5 {
-  color: #0e3198;
-  font-size: 1.1rem;
-  font-weight: 600;
+  color: #1c398e;
+  font-size: 1rem;
+  font-weight: 700;
   margin-left: 0.7em;
   margin-bottom: 2px;
   margin-top: 3px;
@@ -672,8 +711,10 @@ main {
 }
 
 .txtche h6 {
-  font-size: 0.8em;
+  font-size: 0.82em;
   font-weight: 500;
+  line-height: 1.5;
+  color: #1e293b;
 }
 
 .txtche i {
@@ -682,7 +723,7 @@ main {
 }
 
 .fa-regular.fa-square-check {
-  color: #1bb95a;
+  color: #16a34a;
 }
 
 /* ============================================================
@@ -731,35 +772,38 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 4px;
-  margin-bottom: 5px;
-  color: #0da57c;
+  gap: 6px;
+  margin-bottom: 8px;
+  color: #059669;
 }
 
 .daftartxt h6 {
   font-size: 0.7rem;
   font-weight: 600;
+  letter-spacing: 0.03em;
 }
 
 .smalldot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: #0da57c;
+  background-color: #059669;
 }
 
 .bottomcardcont h3 {
   font-size: 1.4rem;
   color: #f3f5f9;
-  font-weight: 600;
+  font-weight: 700;
+  line-height: 1.3;
 }
 
 .bottomcardcont h5 {
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 0.8rem;
-  font-weight: 200;
+  font-weight: 400;
   margin-right: 2em;
   margin-top: 8px;
+  line-height: 1.6;
 }
 
 .daftarbottom {
@@ -773,17 +817,22 @@ main {
   gap: 10px;
   align-self: center;
   padding: 1rem;
-  background-color: #ffb900;
+  background-color: #f59e0b;
   border-radius: 15px;
   text-align: center;
   position: relative;
   z-index: 1;
+  transition: opacity 0.15s ease;
+}
+
+.daftarbottom:active {
+  opacity: 0.85;
 }
 
 .daftarbottom a {
   color: black;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1rem;
 }
 
@@ -802,11 +851,16 @@ main {
   align-self: center;
   padding: 1rem;
   background-color: transparent;
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 15px;
   text-align: center;
   position: relative;
   z-index: 1;
+  transition: opacity 0.15s ease;
+}
+
+.ttgbottom:active {
+  opacity: 0.75;
 }
 
 .ttgbottom a {
@@ -836,31 +890,31 @@ main {
 .btmtxt {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
 }
 
 .btmtxt h3 {
   font-size: 1.2rem;
   color: #1c398e;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .btmtxt h6 {
-  color: #a1a9b6;
+  color: #94a3b8;
+  font-weight: 400;
 }
 
 /* Contact card */
 .contactcard {
-  margin-top: 16px;
+  margin-top: 12px;
   width: 95%;
   min-height: 9vh;
   box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.05),
-    0 8px 24px rgba(0, 0, 0, 0.08);
+    0 1px 4px rgba(0, 0, 0, 0.04),
+    0 6px 18px rgba(0, 0, 0, 0.06);
   border-radius: 20px;
   display: flex;
   flex-direction: row;
-
   align-items: start;
   gap: 8px;
   padding-bottom: 10px;
@@ -878,7 +932,7 @@ main {
 .innercard {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
   align-self: center;
   padding: 5px;
   text-align: start;
@@ -889,17 +943,20 @@ main {
   color: black;
   font-weight: 700;
   text-decoration: none;
+  font-size: 0.9rem;
 }
 
 .innercard h6 {
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #64748b;
 }
 
 /* Icon colour variants */
 .fa-brands.fa-whatsapp {
   width: fit-content;
   height: fit-content;
-  color: #2d5be9;
+  color: #3b5bdb;
   background-color: #dbeafe;
   padding: 12px;
   flex-shrink: 0;
@@ -909,8 +966,8 @@ main {
 .fa-brands.fa-whatsapp.fa-1x {
   width: fit-content;
   height: fit-content;
-  color: #1b914b;
-  background-color: #dbfce7;
+  color: #16a34a;
+  background-color: #dcfce7;
   padding: 12px;
   flex-shrink: 0;
   border-radius: 12px;
@@ -919,8 +976,8 @@ main {
 .fa-solid.fa-location-dot.fa-1x {
   width: fit-content;
   height: fit-content;
-  color: #cc7631;
-  background-color: #fef3c6;
+  color: #b45309;
+  background-color: #fef3c7;
   padding: 12px 15px;
   flex-shrink: 0;
   border-radius: 12px;
