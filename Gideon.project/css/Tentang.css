@@ -488,8 +488,7 @@ main {
 .daftarcont {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  align-content: center;
+
   margin-top: 2.5rem;
   height: fit-content;
   padding-bottom: 1rem;
@@ -535,6 +534,7 @@ main {
     0 2px 8px rgba(0, 0, 0, 0.05),
     0 8px 24px rgba(0, 0, 0, 0.08);
   border-radius: 15px;
+  margin: auto;
 }
 .reqthing1,
 .reqthing2,
@@ -586,9 +586,71 @@ main {
 }
 
 .timeline {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   display: flex;
-  text-align: start;
+
+  flex-direction: column;
+}
+
+.timeline h4 {
+  color: #06278b;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+.outercont {
+  display: flex;
+  flex-direction: column;
   align-content: center;
+  border-left: #8b958f 2px dashed;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+.dot {
+  background-color: #00be4c;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+  margin-left: -0.6rem;
+}
+.innercont {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  margin-top: -5px;
+}
+.txtcont h6 {
+  width: fit-content;
+  height: fit-content;
+  padding: 3px 5px;
+  background-color: #3ff9894e;
+  color: #006c2b;
+  border-radius: 15px;
+  font-size: 0.53rem;
+  font-weight: 600;
+  margin: 1.5px;
+}
+.txtcont h5 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #062686;
+  margin: 1px 3px;
+}
+.txtcont {
+  display: flex;
+  width: 70vw;
+  min-height: 5vh;
+  flex-direction: column;
+  padding: 0.5rem;
+  border-radius: 15px;
+  border: #03b748 1px solid;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.05),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+  margin-bottom: 5px;
 }
 
 .hubungi {
@@ -610,6 +672,7 @@ main {
   position: relative;
   overflow: hidden;
   z-index: 0;
+  margin: auto;
 }
 .hubungi h4 {
   font-size: 1.1rem;

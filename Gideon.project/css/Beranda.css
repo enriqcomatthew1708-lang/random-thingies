@@ -53,7 +53,7 @@ main {
  */
 
 .topimg {
-  background-image: url("Img/Skolimg.png");
+  background-image: url("../Img/Skolimg.png");
   background-size: 110%;
   background-position: center top;
   background-repeat: no-repeat;
