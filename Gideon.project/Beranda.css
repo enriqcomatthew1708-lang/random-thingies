@@ -788,6 +788,7 @@ main {
   height: 7px;
   border-radius: 50%;
   background-color: #059669;
+  margin-bottom: 1px;
 }
 
 .bottomcardcont h3 {
