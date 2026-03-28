@@ -242,17 +242,17 @@ main {
 .innerjadwal {
   width: 80vw;
   height: fit-content;
-  padding: 1rem;
+  padding: 5px 1rem;
 
   box-shadow:
     0 1px 4px rgba(0, 0, 0, 0.04),
     0 6px 18px rgba(0, 0, 0, 0.06);
-  border-radius: 15px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-content: center;
   align-items: center;
-  gap: 1rem;
+  background-color: #fffafa;
   margin: auto;
   margin-top: 1rem;
 }
@@ -262,9 +262,36 @@ main {
 .childcont3,
 .childcont4,
 .childcont5 {
-  width: 100%;
+  width: 110.1%;
+  height: 3.5rem;
   display: flex;
   align-items: center;
   align-content: center;
-  justify-content: space-between;
+}
+.childcont2,
+.childcont4 {
+  background-color: white;
+}
+.day {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.time {
+  margin-left: 2.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #787f8a;
+}
+.addit {
+  margin-left: auto;
+  margin-right: 1rem;
+  border-radius: 15px;
+  width: fit-content;
+  height: fit-content;
+  padding: 6px 10px;
+  background-color: #e5f0ff;
+  color: #0537ce;
+  font-size: 0.6rem;
+  font-weight: 600;
 }
