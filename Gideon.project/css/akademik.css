@@ -170,3 +170,101 @@ main {
   background-color: #f3e8ff;
   color: #901ddf;
 }
+.mapelcont {
+  width: 80vw;
+  height: fit-content;
+  padding: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.04),
+    0 6px 18px rgba(0, 0, 0, 0.06);
+
+  margin: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 20px;
+}
+
+.mapelcont h4 {
+  color: #062686;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-left: 8px;
+}
+.mapelpill {
+  display: flex;
+  margin-bottom: 10px;
+  align-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-left: 5px;
+}
+.nummapel {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #dbeafe;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.mapelpill h5 {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.nummapel h5 {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #0031c4;
+}
+.jadwalcont {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+.jadwaltxt {
+  display: flex;
+  gap: 8px;
+  color: #002594;
+  align-content: start;
+}
+.jadwaltxt h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.jadwaltxt i {
+  font-size: 1.15rem;
+  margin-top: 2px;
+}
+.innerjadwal {
+  width: 80vw;
+  height: fit-content;
+  padding: 1rem;
+
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.04),
+    0 6px 18px rgba(0, 0, 0, 0.06);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.childcont1,
+.childcont2,
+.childcont3,
+.childcont4,
+.childcont5 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
