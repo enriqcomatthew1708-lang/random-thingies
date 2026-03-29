@@ -224,20 +224,22 @@ main {
   flex-direction: column;
   padding: 1rem;
   margin-bottom: 1.5rem;
+  margin-top: 1rem;
 }
 .jadwaltxt {
   display: flex;
-  gap: 8px;
+  gap: 5px;
   color: #002594;
   align-content: start;
+  margin-left: 10px;
 }
 .jadwaltxt h4 {
   font-size: 1.1rem;
   font-weight: 600;
 }
 .jadwaltxt i {
-  font-size: 1.15rem;
-  margin-top: 2px;
+  font-size: 1.1rem;
+  margin-top: 4px;
 }
 .innerjadwal {
   width: 80vw;
@@ -293,5 +295,79 @@ main {
   background-color: #e5f0ff;
   color: #0537ce;
   font-size: 0.6rem;
+  font-weight: 500;
+}
+
+.prestasicont {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+.prestasitxt {
+  display: flex;
+  color: #002696;
+  gap: 5px;
+  margin-bottom: 0.8rem;
+}
+.fa-solid.fa-trophy {
+  color: #ffbf00;
+  font-size: 1.1rem;
+}
+.prestasitxt h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.prestasichild {
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+  height: fit-content;
+  padding: 1rem;
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.04),
+    0 6px 18px rgba(0, 0, 0, 0.06);
+  border-radius: 15px;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+.iconprestasi {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fef3c6;
+  color: #f1ab50;
+  align-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: center;
+  margin-right: 10px;
+  align-self: center;
+}
+.iconprestasi .fa-solid.fa-trophy,
+.iconprestasi h6 {
+  font-size: 0.8rem;
+}
+.iconprestasi h6 {
+  font-weight: 500;
+  font-size: 0.65rem;
+}
+.contentprestasi h5 {
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: #00196b;
+}
+.contentprestasi h6 {
+  width: fit-content;
+  height: fit-content;
+  padding: 5px 10px;
+  background-color: #dbfce7;
+  color: #047038;
+  border-radius: 15px;
+  font-size: 0.67rem;
+  margin-top: 6px;
   font-weight: 600;
 }
