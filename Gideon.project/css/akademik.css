@@ -181,7 +181,7 @@ main {
     0 6px 18px rgba(0, 0, 0, 0.06);
 
   margin: auto;
-  margin-bottom: 1.5rem;
+
   border-radius: 20px;
 }
 
@@ -223,8 +223,8 @@ main {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  margin-bottom: 1.5rem;
-  margin-top: 1rem;
+
+  margin-top: 1.5rem;
 }
 .jadwaltxt {
   display: flex;
@@ -301,19 +301,21 @@ main {
 .prestasicont {
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   margin-bottom: 2rem;
   padding: 1rem;
 }
 .prestasitxt {
   display: flex;
-  color: #002696;
-  gap: 5px;
-  margin-bottom: 0.8rem;
+  color: #002594;
+  gap: 6px;
+  margin-bottom: 0.5rem;
+  margin-left: 0.6rem;
 }
-.fa-solid.fa-trophy {
-  color: #ffbf00;
-  font-size: 1.1rem;
+.prestasitxt i {
+  color: #ffcf3f;
+  font-size: 1.2rem;
+  margin-top: 3px;
 }
 .prestasitxt h4 {
   font-size: 1.2rem;
@@ -330,11 +332,12 @@ main {
     0 6px 18px rgba(0, 0, 0, 0.06);
   border-radius: 15px;
   margin: auto;
+
   margin-bottom: 1rem;
 }
 .iconprestasi {
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 2.67em;
+  height: 2.7rem;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -349,25 +352,26 @@ main {
 }
 .iconprestasi .fa-solid.fa-trophy,
 .iconprestasi h6 {
+  color: #ffcf3f;
   font-size: 0.8rem;
 }
 .iconprestasi h6 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.65rem;
 }
 .contentprestasi h5 {
-  font-size: 0.83rem;
-  font-weight: 600;
+  font-size: 0.85rem;
+  font-weight: 500;
   color: #00196b;
 }
 .contentprestasi h6 {
   width: fit-content;
   height: fit-content;
-  padding: 5px 10px;
+  padding: 3px 8px;
   background-color: #dbfce7;
   color: #047038;
   border-radius: 15px;
-  font-size: 0.67rem;
+  font-size: 0.6rem;
   margin-top: 6px;
   font-weight: 600;
 }
