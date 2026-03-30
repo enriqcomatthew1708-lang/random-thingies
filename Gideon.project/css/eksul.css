@@ -1,0 +1,55 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+}
+
+.toptxt {
+  margin: 1rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+.subtitletop {
+  width: fit-content;
+  height: fit-content;
+  padding: 4px 8px;
+  background-color: #fff5ce;
+  color: #c66e15;
+  border-radius: 15px;
+  margin-left: 10px;
+}
+.subtitletop h6 {
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+.toptxt h2 {
+  margin-top: 3px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #0e2f93;
+}
+.toptxt h5 {
+  margin-top: 2px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #70747d;
+  margin-bottom: 12px;
+}
