@@ -68,15 +68,15 @@ main {
   color: white;
   padding: 5px;
 }
-.texttop h4,
-.texttop h5 {
+.texttop h1,
+.texttop h2 {
   margin: 0;
   line-height: 1.2;
 }
-#texttop h4 {
+.texttop h1 {
   font-size: 14px;
 }
-.texttop h5 {
+.texttop h2 {
   font-size: 12px;
   font-weight: 400;
   color: #d4a11b;
