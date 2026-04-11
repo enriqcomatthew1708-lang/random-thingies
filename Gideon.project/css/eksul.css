@@ -165,7 +165,7 @@ main {
 .summary p {
   font-size: 0.75rem;
   font-weight: 500;
-  margin-top: 0.5rem;
+
   margin-bottom: 0.9rem;
 }
 .eksulicon {
@@ -217,14 +217,25 @@ main {
   height: 5em;
   border: none;
   border-top: #e0e7ff 1.5px solid;
+
   background-color: white;
   border-radius: 0 0 15px 15px;
   display: flex;
   align-content: center;
   align-items: center;
   justify-content: center;
+  transition: border-radius 1.5s ease;
+}
+#toggle1.open,
+#toggle2.open,
+#toggle3.open {
+  border-radius: 0;
+  transition: border-radius 0s 0s;
 }
 
+.fa-solid.fa-chevron-up.open {
+  transform: rotate(180deg);
+}
 .fa-solid.fa-chalkboard-user,
 .fa-solid.fa-trophy,
 .fa-solid.fa-circle-info {
@@ -262,20 +273,28 @@ main {
   margin-right: 5px;
   color: #453acb;
   font-size: 1rem;
+  transition: transform 0.4s ease;
 }
 .itemcontent1,
 .itemcontent2,
 .itemcontent3 {
   width: 90vw;
-  height: 70rem;
+  max-height: 0;
   background-color: white;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-content: center;
   align-items: center;
-
   border-radius: 0 0 15px 15px;
+  transition: max-height 0.5s ease;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+.itemcontent1.open,
+.itemcontent2.open,
+.itemcontent3.open {
+  max-height: 63rem;
   border: #e0e7ff 1px solid;
 }
 .pembinacont {
@@ -363,6 +382,7 @@ main {
   padding: 10px;
   border-left: 3px solid #4338ca;
   gap: 8px;
+  margin-bottom: 1rem;
 }
 .syaratcont h5 {
   margin: 2px;
@@ -378,11 +398,156 @@ main {
   gap: 7px;
 }
 .syaratitem p {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 .syaratitem i {
   color: #4338ca;
   font-size: 0.85rem;
   margin-left: 3px;
+}
+.jadwalcont {
+  border-top: 1px solid #e0e7ff;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  width: 90vw;
+}
+.jadwalcont h5 {
+  color: #4338ca;
+  font-size: 1rem;
+  margin-right: auto;
+  margin-left: 1rem;
+  font-weight: 600;
+}
+.jadwalitem {
+  width: 75vw;
+  height: fit-content;
+  border: 1px solid #e0e7ff;
+  border-radius: 15px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: start;
+  background-color: #f8faff;
+  text-align: start;
+  padding: 10px;
+  gap: 10px;
+}
+.jadwalitem i {
+  color: #6366f1;
+  margin: 0;
+  font-size: 1.2rem;
+  margin-left: 5px;
+}
+.jadwaltxt {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  align-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  gap: 2px;
+}
+.jadwaltxt h5 {
+  color: #9ca3af;
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin: 0;
+  margin-right: auto;
+}
+.jadwaltxt p {
+  font-size: 0.89rem;
+  font-weight: 600;
+  margin: 0;
+  color: #1e3a8a;
+}
+.prestasicont {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-top: 1px solid #e0e7ff;
+  padding: 10px;
+  width: 85vw;
+}
+.prestasicont h5 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #b45309;
+  margin: 8px;
+  margin-left: 12px;
+  margin-bottom: 0;
+}
+.prestasiitem1,
+.prestasiitem2,
+.prestasiitem3 {
+  width: 70vw;
+  height: 3rem;
+  padding: 10px;
+  border-radius: 15px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.prestasiitem1 i,
+.prestasiitem2 i,
+.prestasiitem3 i {
+  width: 2.7rem;
+  height: 2.7rem;
+  font-size: 1.2rem;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+.prestasiitem1 h6,
+.prestasiitem2 h6,
+.prestasiitem3 h6 {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+.prestasiitem1 p,
+.prestasiitem2 p,
+.prestasiitem3 p {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #374151;
+}
+.prestasiitem1 h6 {
+  color: #92400e;
+}
+.prestasiitem1 {
+  border: 1px solid #fde68a;
+}
+.prestasiitem1 i {
+  color: #d97706;
+  background-color: #fef9c3;
+}
+.prestasiitem2 h6,
+.prestasiitem3 h6 {
+  color: #374151;
+}
+.prestasiitem2 {
+  border: 1px solid #d1d9f5;
+}
+.prestasiitem2 i {
+  color: #6366f1;
+  background-color: #eef2ff;
+}
+.prestasiitem3 i {
+  color: #059669;
+  background-color: #f0fdf4;
+}
+.prestasiitem3 {
+  border: 1px solid #d1d9f5;
 }
