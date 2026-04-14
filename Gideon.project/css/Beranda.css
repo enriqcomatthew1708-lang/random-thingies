@@ -92,7 +92,7 @@ main {
 }
 
 .greet {
-  background: #f59e0b;
+  background-color: #fdb12d;
   color: #000;
   padding: 5px 15px;
   border-radius: 99px;
@@ -103,8 +103,7 @@ main {
   letter-spacing: 0.04em;
 }
 .importanttext h2,
-.importanttext h3,
-.importanttext h5 {
+.importanttext p {
   margin: 0;
   line-height: 1.2;
 }
@@ -115,16 +114,17 @@ main {
   font-weight: 800;
 }
 
-.importanttext h3 {
-  color: #f59e0b;
+.importanttext .subtitle {
+  color: #f39d08;
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 3px;
 }
 
 .subtext {
   color: rgba(255, 255, 255, 0.88);
   font-weight: 400;
+  font-size: 0.85rem;
   padding: 5px;
   line-height: 1.6;
 }
@@ -155,8 +155,8 @@ main {
   opacity: 0.85;
 }
 
-.Info a h2,
-.Mainakademik a h2 {
+.Info a p,
+.Mainakademik a p {
   margin: 0;
   font-size: 1rem;
 }
@@ -211,17 +211,17 @@ main {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
 }
 
-.tab1 h5,
-.tab2 h5,
-.tab3 h5,
-.tab4 h5 {
+.tab1 p,
+.tab2 p,
+.tab3 p,
+.tab4 p {
   font-size: 1.35rem; /* emoji icon size */
 }
 
-.tab1 h6,
-.tab2 h6,
-.tab3 h6,
-.tab4 h6 {
+.tab1 .nameeksul,
+.tab2 .nameeksul,
+.tab3 .nameeksul,
+.tab4 .nameeksul {
   font-size: 0.72rem;
   font-weight: 600;
 }
@@ -263,7 +263,7 @@ main {
   margin-bottom: 2em;
 }
 
-.addinfo h4 {
+.addinfo .amount {
   margin: 0;
   padding: 0;
   color: #1c398e;
@@ -271,7 +271,7 @@ main {
   font-weight: 600;
 }
 
-.addinfo h5 {
+.addinfo .titlething {
   margin: 0;
   padding: 0;
   color: #94a3b8;
@@ -335,9 +335,9 @@ main {
   margin-left: 15px;
 }
 
-.microtxt h6 {
+.microtxt p {
   font-size: 0.6rem;
-  font-weight: 700;
+  font-weight: 800;
   color: #3b5bdb;
   letter-spacing: 0.07em;
 }
@@ -382,7 +382,7 @@ main {
   font-weight: 700;
 }
 
-.knpcard h5 {
+.knpcard p {
   color: #64748b;
   font-weight: 600;
   font-size: 0.82rem;
@@ -395,8 +395,8 @@ main {
   color: #1c398e;
 }
 .fa-solid.fa-trophy {
-  background-color: #fef3c7;
-  color: #b45309;
+  background-color: #fff5ce;
+  color: #f9a200;
 }
 .fa-solid.fa-chalkboard-user {
   background-color: #dcfce7;
@@ -423,16 +423,6 @@ main {
   padding-bottom: 2em;
 }
 
-.ttgkami h2,
-.ttgkami h4,
-.ttgkami h5,
-.ttgkami a {
-  margin: 0;
-  padding: 0;
-  color: white;
-  text-decoration: none;
-}
-
 .misicont span i {
   font-size: x-small;
   color: #d97706;
@@ -445,6 +435,10 @@ main {
   background-color: rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   align-self: center;
+  background-image: url("https://images.unsplash.com/photo-1764720573370-5008f1ccc9fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGNsYXNzcm9vbSUyMGxlYXJuaW5nfGVufDF8fHx8MTc3MjQzNDQ1OHww&ixlib=rb-4.1.0&q=80&w=1080");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .ttgtext {
@@ -455,8 +449,9 @@ main {
   border-radius: 12px;
 }
 
-.ttgtext h5 {
+.ttgtext p {
   font-weight: 600;
+  font-size: 0.6rem;
   color: black;
   letter-spacing: 0.05em;
 }
@@ -466,6 +461,7 @@ main {
   padding: 0;
   font-size: 1.4rem;
   font-weight: 700;
+  color: white;
 }
 
 .visicont {
@@ -480,7 +476,7 @@ main {
 }
 
 .visicont h4 {
-  color: #f08c00;
+  color: #f39d08;
   font-size: 1.1rem;
   font-weight: 700;
 }
@@ -499,8 +495,8 @@ main {
   text-align: start;
 }
 
-.misicont h5,
-.visicont h5 {
+.misicont p,
+.visicont p {
   font-weight: 400;
   font-size: 0.85rem;
   line-height: 1.6;
@@ -508,7 +504,7 @@ main {
 }
 
 .misicont h4 {
-  color: #f08c00;
+  color: #f39d08;
   font-size: 1.1rem;
   font-weight: 700;
 }
@@ -535,13 +531,14 @@ main {
   border-radius: 15px;
   text-decoration: none;
   transition: opacity 0.15s ease;
+  color: black;
 }
 
 .ttgbuton:active {
   opacity: 0.85;
 }
 
-.ttgbuton h4 {
+.ttgbuton p {
   color: black;
   font-weight: 700;
   font-size: 1rem;
@@ -615,7 +612,7 @@ main {
   text-decoration: none;
 }
 
-.linkarrow h5 {
+.linkarrow p {
   font-size: 0.8rem;
   font-weight: 700;
 }
@@ -710,7 +707,7 @@ main {
   flex-shrink: 0;
 }
 
-.txtche h6 {
+.txtche p {
   font-size: 0.82em;
   font-weight: 500;
   line-height: 1.5;
@@ -774,13 +771,13 @@ main {
   align-items: center;
   gap: 6px;
   margin-bottom: 8px;
-  color: #059669;
 }
 
-.daftartxt h6 {
+.daftartxt p {
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.03em;
+  color: #059669;
 }
 
 .smalldot {
@@ -791,14 +788,14 @@ main {
   margin-bottom: 1px;
 }
 
-.bottomcardcont h3 {
+.bottomcardcont h6 {
   font-size: 1.4rem;
   color: #f3f5f9;
   font-weight: 500;
   line-height: 1.3;
 }
 
-.bottomcardcont h5 {
+.bottomcardcont .bottomdesc {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.8rem;
   font-weight: 400;
@@ -894,13 +891,13 @@ main {
   gap: 6px;
 }
 
-.btmtxt h3 {
+.btmtxt .titletxt {
   font-size: 1.2rem;
   color: #1c398e;
   font-weight: 700;
 }
 
-.btmtxt h6 {
+.btmtxt .titledesc {
   color: #94a3b8;
   font-weight: 400;
 }
@@ -939,15 +936,16 @@ main {
   text-align: start;
 }
 
-.innercard h5,
-.innercard a {
+.innercard .maintxt,
+.innercard a,
+.innercard a p {
   color: black;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
   font-size: 0.9rem;
 }
 
-.innercard h6 {
+.innercard .lowerdesc {
   font-weight: 400;
   font-size: 0.75rem;
   color: #64748b;

@@ -76,7 +76,7 @@ main {
 .texttop h1 {
   font-size: 14px;
 }
-.texttop h2 {
+.texttop p {
   font-size: 12px;
   font-weight: 400;
   color: #d4a11b;
@@ -330,7 +330,7 @@ footer {
   flex-direction: column;
 }
 
-.textbottom h4 {
+.textbottom h6 {
   margin: 0;
   font-size: 14px;
   font-weight: 700;
@@ -338,7 +338,7 @@ footer {
   line-height: 1.3;
 }
 
-.textbottom h5 {
+.textbottom p {
   margin: 0;
   font-size: 12px;
   font-weight: 400;
@@ -372,10 +372,10 @@ footer {
   height: auto;
 }
 
-.tiktok h5,
-.instagram h5,
-.Number h5,
-.location h5 {
+.tiktok p,
+.instagram p,
+.Number p,
+.location p {
   margin: 0;
   font-size: 13px;
   font-weight: 300;
@@ -387,7 +387,7 @@ footer {
   max-width: 300px;
 }
 
-.location h5 {
+.location p {
   font-size: 12px;
   line-height: 1.4;
 }

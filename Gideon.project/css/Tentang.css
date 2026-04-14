@@ -21,43 +21,41 @@ main {
   margin: 0;
   padding: 0;
 }
-
 .microtext {
-  width: 75px;
-  height: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  align-content: center;
+}
+.microtext p {
+  width: 70px;
+  height: 12px;
   text-align: center;
   background-color: #bfd7f886;
   display: flex;
   margin-top: 1.5em;
-  margin-left: 0.9em;
+  margin-left: 0.9rem;
   justify-content: center;
   align-content: center;
   align-items: center;
   border-radius: 125px;
   flex-shrink: 0;
   padding: 5px;
-}
-.microtext h6 {
   font-weight: 600;
   color: #3c5ec5;
-  margin: 0;
-  padding: 0;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   letter-spacing: 0.25px;
 }
 
-.iftxt {
+.microtext h2 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: #07257f;
   width: fit-content;
   height: fit-content;
   margin-top: 4px;
-  margin-left: 1em;
-  margin-bottom: 20px;
-}
-
-.iftxt h3 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #07257f;
+  margin-left: 0.8rem;
+  margin-bottom: 15px;
 }
 
 .ttgimg {
@@ -67,30 +65,30 @@ main {
     linear-gradient(
       to top,
       rgba(4, 15, 60, 0.9) 0%,
-      rgba(7, 37, 127, 0.4) 50%,
+      rgba(7, 37, 127, 0.4) 30%,
       rgba(7, 37, 127, 0) 100%
     ),
-    url(placeholder);
+    url("../Img/Skolimg.png");
   background-color: white;
-  background-size: 100%;
+  background-size: cover;
+  background-position: 80% 56%;
   margin: auto;
   border-radius: 20px;
   display: flex;
-
   flex-direction: column;
   align-items: start;
-
   justify-content: flex-end;
   color: white;
-  padding: 1em;
+  padding: 0.7rem;
 }
-.ttgimg h4 {
-  font-size: 1.2rem;
+.ttgimg h2 {
+  font-size: 1.15rem;
   font-weight: 600;
 }
-.ttgimg h6 {
+.ttgimg p {
   color: #cbcdd8;
   font-size: 0.7rem;
+  font-weight: 600;
 }
 
 .ttgtxt {
@@ -105,21 +103,22 @@ main {
   align-content: center;
   text-align: start;
   align-items: start;
-  padding: 1em;
-  gap: 10px;
+  padding: 0.9rem;
+  gap: 6px;
   margin-top: 1.2em;
   border-radius: 15px;
   flex-shrink: 0;
   align-self: center;
   justify-self: center;
+  border: #abc0ff 1px solid;
 }
-.ttgtxt h4 {
+.ttgtxt h3 {
   color: #1d318d;
   font-size: 1.1rem;
   font-weight: 700;
 }
-.ttgtxt h5 {
-  font-size: 0.8rem;
+.ttgtxt p {
+  font-size: 0.75rem;
   font-weight: 600;
   word-spacing: 0.25px;
 }
@@ -127,7 +126,7 @@ main {
 .visicont {
   width: 80vw;
   height: fit-content;
-  padding: 1.4em;
+  padding: 1.2em;
   padding-top: 1em;
   background-color: #d9eafd70;
   box-shadow:
@@ -142,6 +141,7 @@ main {
   margin-top: 1.5em;
   border-radius: 15px;
   flex-grow: 0;
+  border: #3c97ff70 1px solid;
 }
 .visicont h4,
 .misicont h4 {
@@ -150,8 +150,8 @@ main {
   font-weight: 600;
   margin-bottom: 5px;
 }
-.visicont h5,
-.misicont h5 {
+.visicont p,
+.misicont p {
   font-size: 0.8rem;
   font-weight: 600;
   word-spacing: 0.25px;
@@ -173,6 +173,7 @@ main {
   margin-top: 1em;
   border-radius: 15px;
   flex-grow: 0;
+  border: 1px solid #ffd11972;
 }
 .misicont span {
   display: flex;
@@ -206,7 +207,7 @@ main {
   margin-bottom: 2em;
   justify-content: space-evenly;
 }
-.struktur h5 {
+.struktur h3 {
   color: #3f398e;
   font-size: 1.1em;
   font-weight: 600;
@@ -219,7 +220,6 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-
   gap: 1.2em;
 }
 .personimg {
@@ -257,7 +257,7 @@ main {
   padding: 5px;
 }
 
-.person h5 {
+.person p {
   font-size: 0.8rem;
   font-weight: 600;
   display: flex;
@@ -295,7 +295,7 @@ main {
   font-size: 1.5rem;
 }
 
-.tctcont h6 {
+.tctcont p {
   color: #64748b;
   font-size: 0.69rem;
   font-weight: 500;
@@ -303,192 +303,177 @@ main {
   padding-right: 1.5rem;
 }
 
-.gedung,
-.lapangan,
-.lab,
-.classroom,
-.canteen,
-.transportasi,
-.music {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  flex-direction: column;
-}
-
-#gedungtoggle,
-#labtoggle,
-#lapangantoggle,
-#roomtoggle,
-#canteentoggle,
-#transtoggle,
-#musictoggle {
+.itemfasilitas {
   width: 90vw;
   height: fit-content;
-
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
   box-shadow:
     0 2px 8px rgba(0, 0, 0, 0.05),
     0 8px 24px rgba(0, 0, 0, 0.08);
-  background-color: white;
   margin: auto;
-  border: none;
+  border: #abbacf 1px solid;
+}
+.image1,
+.image2,
+.image3,
+.image4,
+.image5,
+.image6,
+.image7 {
+  width: 90vw;
+  height: 10rem;
+  border-radius: 12px 12px 0px 0px;
+
+  background-size: cover;
+
+  display: flex;
+}
+.image1 {
+  background-image:
+    linear-gradient(
+      to top,
+      rgba(4, 15, 60, 0.9) 0%,
+      rgba(7, 37, 127, 0.4) 30%,
+      rgba(7, 37, 127, 0) 100%
+    ),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Wn0wYYlJX1a8whqKxKiqodeNxNrZ6IpSgQ&s");
+  background-position: 80% 90%;
+}
+.image2 {
+  background-image:
+    linear-gradient(
+      to top,
+      rgba(4, 15, 60, 0.9) 0%,
+      rgba(7, 37, 127, 0.4) 30%,
+      rgba(7, 37, 127, 0) 100%
+    ),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBY_wzQSYJv6kBfikELOfGT5rDegSmgn1XvA&s");
+  background-position: 80% 50%;
+}
+.image3 {
+  background-image:
+    linear-gradient(
+      to top,
+      rgba(4, 15, 60, 0.9) 0%,
+      rgba(7, 37, 127, 0.4) 30%,
+      rgba(7, 37, 127, 0) 100%
+    ),
+    url("https://new-fik.upnvj.ac.id/wp-content/uploads/2024/06/Lab-Artificial-Intelligence-JPG.jpg");
+  background-position: 70% 50%;
+}
+.image4 {
+  background-image:
+    linear-gradient(
+      to top,
+      rgba(4, 15, 60, 0.9) 0%,
+      rgba(7, 37, 127, 0.4) 30%,
+      rgba(7, 37, 127, 0) 100%
+    ),
+    url("../Img/kelas.png");
+  background-position: 70% 50%;
+}
+.image5 {
+  background-image:
+    linear-gradient(
+      to top,
+      rgba(4, 15, 60, 0.9) 0%,
+      rgba(7, 37, 127, 0.4) 30%,
+      rgba(7, 37, 127, 0) 100%
+    ),
+    url("https://www.jakarta.go.id/uploads/contents/content--20230406021926.jpeg");
+  background-position: 70% 50%;
+}
+.image6 {
+  background-image:
+    linear-gradient(
+      to top,
+      rgba(4, 15, 60, 0.9) 0%,
+      rgba(7, 37, 127, 0.4) 30%,
+      rgba(7, 37, 127, 0) 100%
+    ),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUauk6vjNO5gqBSdAFDN7jPZFSTYxo3lHnFg&shttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgb2uvyLbO69k4tTKh4Rpa8Udf4mZDjolu4A&s");
+  background-position: 70% 50%;
+}
+.image7 {
+  background-image:
+    linear-gradient(
+      to top,
+      rgba(4, 15, 60, 0.9) 0%,
+      rgba(7, 37, 127, 0.4) 30%,
+      rgba(7, 37, 127, 0) 100%
+    ),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa1_Mf2Vr3IcI7BfbS8K5p1c2hDCyfPBY2kA&s");
+  background-position: 70% 50%;
+}
+.image1 p,
+.image2 p,
+.image3 p,
+.image4 p,
+.image5 p,
+.image6 p,
+.image7 p {
+  width: fit-content;
+  height: 1rem;
+  padding: 1px 5px;
   border-radius: 15px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-align: start;
-  padding: 1em;
-  transition: border-radius 0.87s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.micro {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  margin: 0;
-  margin-bottom: 4px;
-  align-items: center;
-}
-
-.micro h6 {
-  color: #64748b;
-  background-color: #c0c6d057;
-  padding: 0.2rem 0.5rem;
-  font-size: 0.5rem;
-  border-radius: 12px;
-  font-weight: 600;
-  margin-top: -1px;
-  margin-bottom: 0;
-  text-align: center;
-  margin-left: 10px;
-}
-.micro h4 {
-  color: #0e40b3;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.icontrol {
-  background-color: #c8e1ffb7;
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  padding: 0.6rem;
-  font-size: 1.4rem;
-  border-radius: 10px;
-  flex-shrink: 0;
-  margin-right: 10px;
-  align-self: start;
-  align-items: center;
-}
-
-.micro i {
-  margin-top: 5px;
-  font-size: 1.1em;
-  position: absolute;
-  top: 0;
-  right: 0;
-  flex-shrink: 0;
-  margin-top: -1px;
-  transition: transform 0.4s ease;
-}
-
-.inner {
-  display: flex;
-  flex-direction: column; /* yes matthew you did this becasue the icons have to have structuree first before you assemble them*/
-}
-.inner h5 {
-  font-size: 0.67rem;
-  font-weight: 600;
-}
-
-.gedungcontent,
-.labcontent,
-.lapcontent,
-.roomcontent,
-.canteencontent,
-.transcontent,
-.musiccontent {
-  height: 0;
-  width: 90vw;
-  display: flex;
-  overflow: hidden;
-  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.05),
-    0 8px 24px rgba(0, 0, 0, 0.08);
-  align-self: center;
-  text-align: start;
-  flex-direction: column;
-  align-items: center;
   align-content: center;
-
+  align-items: center;
   justify-content: center;
-  margin: auto;
-  border-radius: 0 0 15px 15px;
+  font-size: 0.6rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(255, 255, 255);
+  margin-top: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: 5px;
 }
-.gedungcontent h6,
-.labcontent h6,
-.lapcontent h6,
-.roomcontent h6,
-.canteencontent h6,
-.transcontent h6,
-.musiccontent h6 {
-  padding: 10px;
-  margin-left: 0.75rem;
-  padding-right: 3rem;
+
+.descront {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.ixon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #eff6ff;
+  border-radius: 10px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: auto;
+  margin-left: 10px;
+  margin-top: 10px;
+  flex-shrink: 0;
+  font-size: 1.4rem;
+}
+.descstack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+.descstack h6 {
+  color: #3152a4;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 5px;
+  margin-bottom: 0;
+}
+.descstack p {
+  font-size: 0.7rem;
+  padding: 5px;
+  padding-top: 0px;
   text-align: start;
 }
-
-.imgged,
-.imglab,
-.imglap,
-.imgroom,
-.imgcanteen,
-.imgtrans,
-.musicimg {
-  width: 90%;
-  height: 150px;
-  margin-top: 1rem;
-}
-
-#gedungtoggle.open,
-#labtoggle.open,
-#lapangantoggle.open,
-#roomtoggle.open,
-#canteentoggle.open,
-#transtoggle.open,
-#musictoggle.open {
-  border-radius: 15px 15px 0 0;
-  box-shadow:
-    0 -2px 8px rgba(0, 0, 0, 0.05),
-    0 -8px 24px rgba(0, 0, 0, 0.08);
-  transition: border-radius 0s;
-}
-
-.gedungcontent.open,
-.labcontent.open,
-.lapcontent.open,
-.roomcontent.open,
-.canteencontent.open,
-.transcontent.open,
-.musiccontent.open {
-  width: 90vw;
-  height: 240px;
-  display: flex;
-
-  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-
-  padding-bottom: 0;
-}
-
-.micro .fa-solid.fa-chevron-up.open {
-  transform: rotate(180deg);
-}
-
 .daftarcont {
   display: flex;
   flex-direction: column;
-
   margin-top: 2.5rem;
   height: fit-content;
   padding-bottom: 1rem;
@@ -546,17 +531,14 @@ main {
   align-items: start;
   align-content: center;
   margin-left: 5px;
+  flex-direction: row;
 }
 .required h4 {
   color: #1d318d;
   font-size: 1rem;
   font-weight: 600;
 }
-.reqthing1 h5,
-.reqthing2 h5,
-.reqthing3 h5,
-.reqthing4 h5,
-.reqthing5 h5 {
+.circle {
   font-size: 0.7rem;
   font-weight: 600;
   width: 1.3rem;
@@ -571,17 +553,13 @@ main {
   flex-shrink: 0;
   color: #2a4ebc;
 }
-.reqthing1 h6,
-.reqthing2 h6,
-.reqthing3 h6,
-.reqthing4 h6,
-.reqthing5 h6 {
+.needthing {
   font-size: 0.75rem;
   font-weight: 600;
   margin-top: 2.5px;
   color: rgb(21, 35, 48);
 }
-.reqthing3 h6 {
+.reqthing3 .needthing {
   margin-top: -0.1px;
 }
 
@@ -622,7 +600,13 @@ main {
   align-items: start;
   margin-top: -5px;
 }
-.txtcont h6 {
+.txtcont p {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #062686;
+  margin: 1px 3px;
+}
+.txtcont .timlinep {
   width: fit-content;
   height: fit-content;
   padding: 3px 5px;
@@ -633,12 +617,7 @@ main {
   font-weight: 600;
   margin: 1.5px;
 }
-.txtcont h5 {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #062686;
-  margin: 1px 3px;
-}
+
 .txtcont {
   display: flex;
   width: 70vw;
@@ -699,7 +678,7 @@ main {
   border-radius: 50%;
   background: rgba(233, 35, 35, 0.128);
 }
-.hubungi h6 {
+.hubungi p {
   font-size: 0.61rem;
   font-weight: 400;
   padding-left: 0.5rem;
@@ -729,7 +708,7 @@ main {
   transform: rotate(90deg);
   color: rgb(199, 56, 56);
 }
-.hub1 h5 {
+.hub1 h6 {
   font-size: 0.91rem;
   font-weight: 600;
 }

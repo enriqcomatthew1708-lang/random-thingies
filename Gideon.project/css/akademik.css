@@ -24,9 +24,11 @@ main {
 
 .topbanner {
   min-height: 400px;
-  background-image: url(placeholder);
+  background-image: url("https://c8.alamy.com/comp/2D1571A/vertical-side-view-portrait-of-multi-ethnic-group-of-students-using-laptops-while-studying-in-college-2D1571A.jpg");
   position: relative;
   display: flex;
+  background-size: cover;
+  background-position: 80% 80%;
   flex-direction: column;
   align-items: start;
   align-content: flex-end;
@@ -52,7 +54,7 @@ main {
   font-size: 1.4rem;
   font-weight: 500;
 }
-.topbanner h6 {
+.topbanner p {
   font-size: 0.67rem;
   font-weight: 400;
   margin-bottom: 7px;
@@ -70,7 +72,7 @@ main {
   font-weight: 600;
   margin-bottom: 2px;
 }
-.pelajarancont h6 {
+.pelajarancont p {
   color: #69768a;
   font-size: 0.7rem;
   font-weight: 500;
@@ -112,7 +114,7 @@ main {
   font-size: 1rem;
   font-weight: 600;
 }
-.innertambahcont h6 {
+.innertambahcont p {
   margin: 4px 3px;
 }
 
@@ -135,7 +137,7 @@ main {
   border-radius: 15px;
   margin: 4px 4px;
 }
-.pill h6 {
+.pill p {
   color: black;
   font-size: 0.6rem;
 
@@ -210,11 +212,11 @@ main {
   justify-content: center;
   border-radius: 50%;
 }
-.mapelpill h5 {
+.mapelpill p {
   font-size: 0.9rem;
   font-weight: 500;
 }
-.nummapel h5 {
+.nummapel p {
   font-size: 0.72rem;
   font-weight: 500;
   color: #0031c4;
@@ -355,16 +357,16 @@ main {
   color: #ffcf3f;
   font-size: 0.8rem;
 }
-.iconprestasi h6 {
+.iconprestasi p {
   font-weight: 600;
   font-size: 0.65rem;
 }
-.contentprestasi h5 {
+.contentprestasi p {
   font-size: 0.85rem;
   font-weight: 500;
   color: #00196b;
 }
-.contentprestasi h6 {
+.contentprestasi .level {
   width: fit-content;
   height: fit-content;
   padding: 3px 8px;
