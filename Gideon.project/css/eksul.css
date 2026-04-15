@@ -89,21 +89,21 @@ main {
 .itemimg1 {
   background:
     linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.05) 60%),
-    url("../Img/Futsal.png.jpg");
+    url("../Img/Futsal.webp");
   background-size: cover;
   background-position: 40% 80%;
 }
 .itemimg2 {
   background:
     linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.05) 60%),
-    url("../Img/Musik.png.jpg");
+    url("../Img/Musik..webp");
   background-size: cover;
   background-position: 50% 20%;
 }
 .itemimg3 {
   background:
     linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.05) 60%),
-    url("../Img/Pramuka.png.jpg");
+    url("../Img/Pramuka.webp");
   background-size: cover;
   background-position: 40% 80%;
 }

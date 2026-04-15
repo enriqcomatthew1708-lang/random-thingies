@@ -68,7 +68,7 @@ main {
       rgba(7, 37, 127, 0.4) 30%,
       rgba(7, 37, 127, 0) 100%
     ),
-    url("../Img/Skolimg.png");
+    url("../Img/Skolimg.webp");
   background-color: white;
   background-size: cover;
   background-position: 80% 56%;
@@ -371,7 +371,7 @@ main {
       rgba(7, 37, 127, 0.4) 30%,
       rgba(7, 37, 127, 0) 100%
     ),
-    url("../Img/kelas.png");
+    url("../Img/kelas.webp");
   background-position: 70% 50%;
 }
 .image5 {
@@ -382,7 +382,7 @@ main {
       rgba(7, 37, 127, 0.4) 30%,
       rgba(7, 37, 127, 0) 100%
     ),
-    url("https://www.jakarta.go.id/uploads/contents/content--20230406021926.jpeg");
+    url("../Img/Bis.webp");
   background-position: 70% 50%;
 }
 .image6 {
@@ -393,7 +393,7 @@ main {
       rgba(7, 37, 127, 0.4) 30%,
       rgba(7, 37, 127, 0) 100%
     ),
-    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUauk6vjNO5gqBSdAFDN7jPZFSTYxo3lHnFg&shttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgb2uvyLbO69k4tTKh4Rpa8Udf4mZDjolu4A&s");
+    url("../Img/Tv.webp");
   background-position: 70% 50%;
 }
 .image7 {
