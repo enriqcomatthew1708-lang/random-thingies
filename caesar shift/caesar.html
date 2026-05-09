@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>caesar shifter</title>
+    <meta charset="utf-8" />
+    <script
+      src="https://kit.fontawesome.com/424c315a49.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="caesar.css" />
+  </head>
+  <body>
+    <h1>Caesar Shifter</h1>
+
+    <div class="maincont">
+      <div class="txtcont1">
+        <label for="text1" class="label1">Caesar Text here</label>
+        <input type="text" id="text1" />
+      </div>
+
+      <div class="middlething">
+        <button id="switch">Switch</button>
+        <label for="userinput">Select shift amount</label>
+        <select name="userinput" id="userinput">
+          <option value="0">Please select a shift</option>
+          <option value="1">Shift 1</option>
+          <option value="2">Shift 2</option>
+          <option value="3">Shift 2</option>
+          <option value="4">Shift 2</option>
+          <option value="5">Shift 2</option>
+          <option value="6">Shift 2</option>
+          <option value="7">Shift 2</option>
+          <option value="8">Shift 2</option>
+          <option value="9">Shift 9</option>
+          <option value="10">Shift 10</option>
+          <option value="11">Shift 11</option>
+          <option value="12">Shift 12</option>
+          <option value="13">Shift 13</option>
+          <option value="14">Shift 14</option>
+          <option value="15">Shift 15</option>
+          <option value="16">Shift 16</option>
+          <option value="17">Shift 17</option>
+          <option value="18">Shift 18</option>
+          <option value="19">Shift 19</option>
+          <option value="20">Shift 20</option>
+          <option value="21">Shift 21</option>
+          <option value="22">Shift 22</option>
+          <option value="23">Shift 23</option>
+          <option value="24">Shift 24</option>
+          <option value="25">Shift 25</option>
+        </select>
+        <i class="fa-solid fa-arrow-right-long"></i>
+
+        <button id="trigger">Shift</button>
+      </div>
+
+      <div class="txtcont2">
+        <label for="text2" class="labe2">Translated Text</label>
+        <input type="text" id="text2" readonly />
+      </div>
+    </div>
+  </body>
+
+  <script src="caesar.js"></script>
+</html>

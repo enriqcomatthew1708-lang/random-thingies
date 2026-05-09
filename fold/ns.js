@@ -379,7 +379,7 @@ document.getElementById("sub1").onclick = function () {
 
 //CALLBACK = a function that is passed as an arguement to another function
 //like reading a file netwrok request or working with databases
-// its  like async
+// its  like sync
 //hello(wait);
 //function hello(callback) {
 //  console.log("hello");
@@ -400,6 +400,14 @@ function sum(callback, x, y) {
   let result = x + y;
   callback(result);
 }
-function display(result) {
-  console.log(result);
-}
+
+//<FOREACH is a syntax where you assigna  function and an array and it will automatically apply that function to each part of the array. theres 3 things in order that is provided, element, index, and array
+//function display(result) {
+// console.log(result);
+//}
+
+//const bomboclatt = "six seven";
+//bomboclatt.split("").forEach(display);
+//function display(element, index, array) {
+//  console.log(element, index + 1, array);
+//}
