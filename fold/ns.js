@@ -395,11 +395,11 @@ document.getElementById("sub1").onclick = function () {
 //function goodbye() {
 //console.log("goodbye");
 //}
-sum(display, 1, 2);
-function sum(callback, x, y) {
-  let result = x + y;
-  callback(result);
-}
+//sum(display, 1, 2);
+//function sum(callback, x, y) {
+//  let result = x + y;
+// callback(result);
+//}
 
 //<FOREACH is a syntax where you assigna  function and an array and it will automatically apply that function to each part of the array. theres 3 things in order that is provided, element, index, and array
 //function display(result) {
@@ -411,3 +411,145 @@ function sum(callback, x, y) {
 //function display(element, index, array) {
 //  console.log(element, index + 1, array);
 //}
+//MAP syntax similar to foreach but returns a new array
+
+//let idk = [1, 2, 3, 4, 5];
+//const newarray = idk.map(square);
+//console.log(newarray);
+
+//function square(element) {
+//return Math.pow(element, 2);
+//}
+//const charachters = "sandy spongebob squiddy patrick";
+//const uppercase = charachters.split(" ").map(douppercase);
+////console.log(uppercase);
+//function douppercase(element) {
+// return element.toUpperCase();
+//}
+
+//const databases = ["2023-8-10", "2024-5-8", "2025-6-9"];
+///console.log(databases.map(formatdates));
+
+//function formatdates(element) {
+// const parts = element.split("-");
+//return `${parts[1]}/${parts[2]}/${parts[0]}`;
+//}
+//.FILTER creates a new array by filtering out certain elements
+//let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//let filterednumbers = numbers.filter(iseven);
+//console.log(filterednumbers);
+
+//function iseven(element) {
+//  return element % 2 !== 0;
+//}
+//const ages = [16, 17, 18, 18, 60];
+//console.log(ages.filter(isadult));
+//console.log(ages.filter(ischild));
+//function isadult(element) {
+//return element >= 18;
+//}
+//function ischild(element) {
+// return element < 18;
+//}
+
+//unrelated funciotn
+
+//const students = [
+//  { name: "Alice", grade: 82 },  { name: "Bob", grade: 45 },
+//  { name: "Carlos", grade: 91 },
+//  { name: "Diana", grade: 50 },
+//  { name: "Eve", grade: 38 },
+//  { name: "Frank", grade: 76 },
+//];
+//let sorted;
+//let finalarr = [];
+//function sort() {
+//  let sortarr = [];
+//  for (let i = 0; i < students.length; i++) {
+//    let current = students[i].grade;
+//    let nextnum = 0;
+//    let leftarr;
+//    let rightarr;
+//    if (i > 0) {
+//      while (nextnum < sortarr.length && current < sortarr[nextnum].grade) {
+//        nextnum++;
+//      }
+//     leftarr = sortarr.slice(0, nextnum);
+//      rightarr = sortarr.slice(nextnum);
+//      sortarr = [...leftarr, students[i], ...rightarr];
+//    } else {
+//      sortarr = [students[0]]
+//    }
+//  }
+//  finalarr = sortarr.map((element) => element.name);
+//  console.log(finalarr);
+//}
+//sort();
+
+//REDUCE reduce elements of an array to a single value
+//const prices = [12, 15, 120, 190, 40];
+//const total = prices.reduce(sum);
+//console.log(`$${total.toFixed(2)}`);
+//function sum(previous, next) {
+//  return previous + next;
+//}
+//
+//const grades = [10, 75, 50, 90, 80, 65, 95];
+//const maximum = grades.reduce(getMax);
+//const minimum = grades.reduce(getMin);
+//console.log(maximum, minimum);
+//
+//function getMax(previous, next) {
+//  return Math.max(previous, next);
+//}
+//function getMin(previous, next) {
+//  return Math.min(previous, next);
+//}//
+
+//const sentence =
+//  "Hello my name name is definetly not matthew or george the third the humongous i am";
+//const longword = sentence.split(" ").reduce(longsearch);
+//console.log(longword);
+//
+//function longsearch(prev, next) {
+//  let l1 = prev.length;
+//  let l2 = next.length;
+//
+//  return l1 > l2 ? prev : next;
+//}
+//
+////FUNCTION EXPRESSIONS a way to store or define functions as values or varibels
+//.const hello = function () {
+//  console.log("hello world");
+//};
+//hello();
+//setTimeout(function () {
+//  console.log("hello world");
+//}, 3000);
+
+//const numero = [
+//  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+//];
+//const squaro = numero.map(function (element) {
+//  return element ** 2;
+//});
+//const cubo = numero.map(function (element) {
+//  return element ** 3;
+//});
+//console.log(squaro, cubo);
+//const evennums = numero.filter(function (element) {
+//  return element % 2 === 0;
+//});
+//const oddnums = numero.filter(function (element) {
+//  return element % 2 !== 0;
+//});
+//console.log(evennums, oddnums);
+//ARROW FUNCTIONS
+const harlo = (name, age) => {
+  (console.log(`hello my name is ${name}`),
+    console.log(`i am ${age} years old`));
+};
+harlo("matthew", "14");
+setTimeout(() => {
+  console.log("hello");
+}, 3000);

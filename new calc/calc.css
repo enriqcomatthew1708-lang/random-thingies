@@ -1,0 +1,90 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+}
+/* nobodys here just kidding*/
+.mainbod {
+  width: fit-content;
+
+  height: fit-content;
+  padding: 1rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.5rem;
+  background-color: #313439;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 15rem;
+  margin: auto;
+}
+
+.textoutput {
+  height: 6.5vh;
+  width: 90%;
+  max-width: 20rem;
+  border-radius: 10px;
+  background-color: #c6c7c3;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.5rem;
+  text-align: right;
+  color: #686868;
+}
+.textoutput::placeholder {
+  color: #686868;
+  font-size: 1.5rem;
+}
+/* this is my parent. heh. get it? parent?.okay ill shut up */
+.parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  margin-top: 1rem;
+}
+button {
+  height: 1.75rem;
+  width: 3.25rem;
+  color: #f6f6f5;
+  background-color: #63686c;
+  box-shadow: #3e3e3e 2px 2px;
+  border-radius: 5px;
+}
+#clear,
+#switchmode,
+#sqrt,
+#backspace {
+  height: 1.4rem;
+}
+.memory {
+  background-color: #080b11;
+  font-weight: 700;
+  box-shadow: #080b11 2px 2px;
+}
+.operator,
+.modifier {
+  background-color: #4b5771;
+}
+#clear,
+#sum {
+  font-weight: 700;
+}
+/* you could say theres sum clear backspace. okay il shut up */
+#sum,
+#clear,
+#backspace {
+  background-color: #f89531;
+}
+
+.numbers,
+#comma {
+  font-weight: 800;
+  font-size: 1rem;
+}
+/* this is the end what are you looking for */
+.pi {
+  margin-top: 100rem;
+}

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Wow, a... calculator</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/424c315a49.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="calc.css" />
+    <script src="calc.js" defer></script>
+  </head>
+  <body>
+    <button class="pi" id="pie">π</button>
+    <div class="mainbod">
+      <input
+        type="text"
+        readonly
+        aria-label="calculator output"
+        class="textoutput"
+        id="output"
+        placeholder="0000000000"
+      />
+      <!--text output-->
+
+      <div class="parent">
+        <!-- buttons parentstart-->
+
+        <button id="clear" aria-label="clear all">
+          <!--clear all start-->
+          AC</button
+        ><!--clear all end-->
+
+        <button id="switchmode" aria-label="changemode" class="modifier">
+          <!--changemode start-->
+          <i class="fa-solid fa-plus-minus"></i>
+        </button>
+        <!--end of switch mode-->
+        <!--give me some privacy-->
+
+        <button id="sqrt" aria-label="squareroot" class="modifier">
+          <i class="fa-solid fa-square-root-variable"></i></button
+        ><!--erm.. hello?-->
+
+        <button id="backspace" aria-label="backspace">
+          <i class="fa-solid fa-delete-left"></i>
+        </button>
+
+        <button id="memclear" aria-label="clear memory" class="memory">
+          MRC
+        </button>
+
+        <button id="memsub" aria-label="memory subtract" class="memory">
+          M-
+        </button>
+        <!--atleast knock-->
+        <button id="memadd" aria-label="memory add" class="memory">M+</button>
+
+        <button id="percent" aria-label="percentage" class="modifier">
+          <i class="fa-solid fa-percent"></i>
+        </button>
+
+        <button id="in7" class="numbers" data-value="7">7</button>
+
+        <button id="in8" class="numbers" data-value="8">8</button>
+
+        <button id="in9" class="numbers" data-value="9">9</button>
+
+        <button id="divide" aria-label="divide" class="operator" data-value="/">
+          <i class="fa-solid fa-divide"></i>
+        </button>
+
+        <button id="in4" class="numbers" data-value="4">4</button>
+
+        <button id="in5" class="numbers" data-value="5">5</button>
+        <!--atleast say excuse me before you look into me-->
+
+        <button id="in6" class="numbers" data-value="6">6</button>
+
+        <button id="mult" aria-label="multiply" class="operator" data-value="x">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <button id="in1" class="numbers" data-value="1">1</button>
+
+        <button id="in2" class="numbers" data-value="2">2</button>
+
+        <button id="in3" class="numbers" data-value="3">3</button>
+
+        <button
+          id="subtract"
+          aria-label="subtract"
+          class="operator"
+          data-value="-"
+        >
+          <i class="fa-solid fa-minus"></i>
+        </button>
+
+        <button id="in0" class="numbers" data-value="0">0</button>
+
+        <button id="comma" aria-label="comma" class="numbers" data-value=".">
+          .</button
+        ><!--what are you even looking for-->
+
+        <button id="sum" aria-label="equalsign">
+          <i class="fa-solid fa-equals"></i>
+        </button>
+
+        <button id="add" aria-label="addition" class="operator" data-value="+">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+      <!--button parent end-->
+    </div>
+    <!--end of mainbod-->
+  </body>
+</html>
