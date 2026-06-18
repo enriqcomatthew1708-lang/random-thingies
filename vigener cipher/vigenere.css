@@ -1,0 +1,10 @@
+body {
+  background-color: #0a0c0a;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  font-family:
+    "JetBrains Mono", "Fira Code", "Cascadia Code", "Consolas", "Courier New",
+    monospace;
+}

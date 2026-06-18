@@ -4,19 +4,53 @@
     <title>Vigenere Cipher</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="vigenere.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/424c315a49.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <label for="key">Encryption Key</label>
-    <input type="text" id="key" />
-
-    <div class="container">
-      <label for="in1">Text for encryption</label>
-      <input type="text" id="in1" />
-
-      <label for="out1"> Encrypted Text</label>
-      <input type="text" readonly id="out1" />
+    <div class="titlecont">
+      <div class="smallertitle">
+        <p><i class="fa-solid fa-diamond"></i> SYS/CRYPTO</p>
+        <p>V.ALPHA</p>
+      </div>
+      <h1>ENCRYPT</h1>
+      <h2>
+        Viginere Cipher - provide a key in plaintext and plaintext to
+        generate ciphertext
+      </h2>
     </div>
-    <button id="encrypt">Encrypt</button>
+    <div class="mainbody">
+      <div class="left">
+
+      <div class="key">
+        <label for="key1"><i class="fa-solid fa-play"></i>SECRET KEY </label>
+        <input type="password" id="secretkey"">
+      </div>
+      <Button id="enc">
+        <i class="fa-solid fa-play"></i> ENCRYPT
+
+      </Button>
+
+      </div>
+      <div class="right">
+        <label for="in1"><i class="fa-solid fa-play"></i> PLAINTEXT</label>
+        <input type="text" id="in1">
+      </div>
+    
+
+      <div class="output">
+         <label for="out1"><i class="fa-solid fa-play"></i> CIPHERTEXT OUTPUT</label>
+         <input type="text" id="out1" readonly>
+      </div>
+   </div>
+    <script src="vigenere.js"></script>
   </body>
-  <script src="vigenere.js"></script>
 </html>
